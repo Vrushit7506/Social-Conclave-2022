@@ -1,0 +1,431 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Social Conclave</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="preload" href="{% static 'images/sclogo.png' %}" as="image">
+  <link rel="preload" href="{% static 'images/earthRing.png' %}" as="image">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/blogscss.css' %}">
+
+  <script src="{% static 'js/modernizr.js' %}"></script>
+  <script src="{% static 'js/pace.min.js' %}"></script>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+  <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+
+  <style>
+    .blogHeader {
+      display: block;
+    }
+
+    .home-content__buttons .btn {
+      padding: 1.5rem 0.75rem !important;
+    }
+    .header-logo {
+        top: 41px;
+    }
+  </style>
+
+
+</head>
+
+<body id="top">
+    
+    <!-- Header -->
+    <header class="s-header">
+        <div class="header-logo">
+            <a class="site-logo" href="{% url 'main:landing-page' %}">
+                <div class="headlinelogo">
+                    <canvas id="headlinelogocanvas"></canvas>
+                    <img class="scEarth" src="{% static 'images/earthRing.png' %}" alt="Social Impact Logo" />
+                </div>
+                <img class="scLogotxt" src="{% static 'images/socialconclave.png' %}" alt="Homepage">
+            </a>
+        </div>
+        <!-- PC Nav -->
+        <nav id="bigone" class="header-nav1">
+            <div class="header-nav__content1">
+                <ul class="header-nav__list">
+                    <li><a href="{% url 'main:landing-page' %}" title="home">Home</a></li>
+                    <li><a href="https://www.socialconclave.com/#about" title="about">About Us</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li>
+                    <li class="current"><a href="{% url 'core:overTheYears' %}" title="our team">Our Team</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact" title="contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /PC Nav -->
+        <!-- Mobile Nav -->
+        <nav id="smallone" class="con" style="float:right;" onclick="myFunction();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </nav>
+        <!-- /Mobile Nav -->
+    </header>
+    <!-- /Header -->
+    
+    <!-- Mobile Menu -->
+    <div id="myNav" class="ov">
+        <div class="ov-content">
+            <a href="{% url 'main:landing-page' %}" title="home" onclick="myFunction();">Home</a>
+            <a href="https://www.socialconclave.com/#about" title="about" onclick="myFunction();">About Us</a>
+            <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a>
+            <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a>
+            <a class="smoothscroll" href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our Team</a>
+            <a class="smoothscroll" href="https://www.socialconclave.com/#contact" title="contact" onclick="myFunction();">Contact</a>
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+
+
+  <section id="home" class="s-home target-section" data-parallax="scroll"
+    data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
+    data-position-y="center">
+    <div class="overlay"></div>
+    <div class="shadow-overlay"></div>
+    <div class="home-content">
+      <div class="row home-content__main blogHeader">
+        <div class="">
+          <h3>Social Conclave Blogs</h3>
+        </div>
+        <div class="">
+          <h1 style="margin-bottom:0px;">
+            Humanity Against Racism</h1>
+        </div>
+
+        <div class="home-content__buttons">
+          <a href="{% url 'core:overTheYears' %}" class="btn btn--stroke">
+            More About Us
+          </a>
+        </div>
+      </div>
+      <!--<div class="home-content__scroll">
+                    <a href="#about" class="scroll-link smoothscroll">
+                        <span>Scroll Down</span>
+                    </a>
+                </div>-->
+      <!--<div class="home-content__line"></div>
+            </div>-->
+      <ul class="home-social">
+        <li>
+          <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+              aria-hidden="true"></i><span>Facebook</span></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+              aria-hidden="true"></i><span>Twitter</span></a>
+        </li>
+        <li>
+          <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+              aria-hidden="true"></i><span>Instagram</span></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+              aria-hidden="true"></i><span>LinkedIn</span></a>
+        </li>
+      </ul>
+  </section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-11">
+                        <h1 class="blogheading">Humanity Against Racismh</h1><br>
+       <div class="div1">
+          <p class="div1para">After the name was patented in 1971, it took us about 30 years to realize what was wrong
+            with the name 'Fair & Lovely' -
+            this is the world we are living in, where the colour of the skin that our ancestors passed onto us is
+            considered
+            "unnatural", thus leading to "necessary corrective measures"; and this is a mere gust of wind, a part of a
+            more
+            significant storm - which has shaken the core of human existence and is gradually hollowing our roots.
+
+            <br><br>
+          </p>
+          <img class="div1img" src="{% static 'images/Humanity-2.jpg' %}"><br><br>
+        </div>
+        <div class="div2">
+          <p id="div2para"><br><br>Racism, a relatively short term to embody all that it is characterized by, is the
+            prejudice by an individual, community,
+            or institution against a person or people based on their membership of a particular racial or ethnic group,
+            typically
+            one that is considered a minority or marginalized. This antagonism, based on the belief that humans may be
+            divided into
+            separate and exclusive biological entities called "races," depends on establishing a causal link between
+            inherited
+            physical traits and personality traits, intellect, morality, and other cultural and behavioural features.
+
+            <br><br>
+            Racism, xenophobia, etc., have been prevalent for a very long time now. From the urban settings of colonized
+            India to
+            the Auschwitz-Birkenau concentration camps in Nazi-occupied Poland and the lush fields of South Africa which
+            were set
+            aside for the "white minority" during the apartheid era, the discrimination based on a person's membership
+            in a "racial
+            collective nation" has been razing the purity of the entire essence of humankind. However, the notion that
+            racism is
+            seated comfortably on the wealthier's silk sheets can seriously undermine the graveness it has adopted. It
+            is not only
+            ravaging the lives of the rural folk in India, as evident by the unsubtle and perpetual friction between
+            specific
+            communities, but has also been able to creep into the innocent lives of the citizens of the future, as young
+            students
+            have not been able to shield themselves from racial slurs and marginalization and the consequent trauma
+            involved with
+            not being able to fit in with the other students.
+
+            <br><br>
+          </p>
+        </div>
+        <div class="div3">
+          <h1 class="div3quote">“No one is born hating another person because of the color of his skin, or his
+            background, or his religion. People must learn to hate, and if they can learn to hate, they can be taught to
+            love, for love comes more naturally to the human heart than its opposite.” <br>–
+            Nelson Mandela</h1>
+        </div>
+        <div class="div1">
+          <p class="div1para">However, what is it that causes people to be and continue being racist?
+            All of this unwarranted hate and violence can be attributed to people's receptiveness to whatever persists
+            in society.
+            Parents do not actively instil racist notions in their child's minds. The child sees what the environment is
+            nurturing
+            around him and how others behave. This air around them is what racism stems from, not some inherent hatred
+            or "evil".
+            Categorization of people into sects, primarily based on whom we identify ourselves with, is not unnatural.
+            How we choose
+            to define our groups makes us a friend or foe of "progress" - and the marginalization of the other groups
+            makes someone
+            racist if the groups are defined based on the constituent members' race.
+
+            <br><br>
+          </p>
+          <img class="div1img" src="{% static 'images/Humanity-3.jpg' %}"><br><br>
+        </div>
+        <div class="div2">
+          <p id="div2para"> To aptly understand to what degree our environment affects our mindset imperceptibly, a
+            study at Tufts University found
+            that the mere body language of white and black actors interacting in a TV show was sufficient for the
+            viewers to test
+            higher for implicit bias, even when the TV was on mute.
+
+            <br><br>
+
+
+            Further, although it is sufficiently evident that the youth are more egalitarian and progressive, purging
+            racist
+            ideologies is more challenging because it is on their implicit level of bias. The fear that people of
+            different races
+            will not be able to coexist thrivingly and will rob them off of employment opportunities and their sense of
+            security is
+            what drives racism at the core. Generalizing based on one or two negative experiences, stereotyping, fueled
+            with rumours
+            and ignorance, exacerbates the fear, leading to violence. The death of George Floyd on May 25th, 2020, is a
+            classic,
+            disheartening example of acts of violence perpetrated against people of colour by the apparent "racially
+            supreme".
+
+          </p>
+        </div>
+        <div class="div1">
+          <p class="div1para">Additionally, the number of anti-Asian hate incidents, including shunning, slurs and
+            physical attacks, in 2020-21 is
+            substantially more than it used to be, and a disproportionate number of attacks have been directed at women.
+            The
+            research released by reporting forum Stop AAPI Hate revealed that nearly 3,800 incidents were reported over
+            roughly a
+            year during the pandemic. These are the statistics:
+
+            <br><br>
+          </p>
+          <img class="div1img" src="{% static 'images/Humanity-1.png' %}"><br><br>
+        </div>
+        <div class="div2">
+          <p id="div2para">Lastly, what structures racist groups is our leaders' ignorance and the state of denial that
+            our policymakers are
+            seemingly living in. Failing to acknowledge racism in all its forms, in the entertainment industry,
+            healthcare sectors,
+            administration positions, or employment divisions, ending racism can also be initiated if we acknowledge
+            that it is
+            there. Gaslighting people who try to speak up, discrediting them, are the more subtle, unstructured forms of
+            racism,
+            which are not acknowledged by our leaders. Because such instances are not always greeted with opprobrium, it
+            conveys to
+            them that these feelings and their consequent actions are acceptable.
+
+            <br><br>
+            It cannot be denied that there have reforms to combat the stigma involved with interracial marriages and
+            abolish
+            discrimination laws. However, our interpersonal biases, our implicit prejudices, cannot be shaken with a new
+            amendment.
+            Racism is not going to go away with the passing of generations. The media is actively playing its role, but
+            only
+            individual enlightenment can hasten our amelioration from the consequences of having prejudices regarding a
+            varied
+            ancestry, differing beliefs, or more or less melanin in their skins than the perceived majority.
+
+            <br><br>
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="go-top">
+    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+  </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="row footer-main">
+            <div class="col-four tab-full left footer-subscribe">
+                <h4>Let's talk about</h4>
+                <p>Got an inquiry? Feel free to reach out to us! We're happy to discuss on it.</p>
+                <ul class="contact-social">
+                    <li>
+                        <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+                                aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-three tab-full right footer-desc">
+                <div class="footer-log"></div>
+                <h4>Links</h4>
+                <ul>
+                    <li><a class="smoothscroll" href="https://www.socialconclave.com/">Home</a></li>
+                    <li><a href="{% url 'core:overTheYears' %}">Our Team</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}">Blogs</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-five tab-full right footer-subscribe">
+                <h4>Have any questions?</h4>
+                <div class="cinfo-footer">
+                    <h5>POORVA CHADHA</h5>
+                    <p>
+                        <a href="tel:+918828467640">+91-8828467640</a><br>
+                        <a href="mailto:spoorvachadha.nmims@gmail.com">poorvachadha.nmims@gmail.com</a>
+                    </p>
+                </div>
+                <div class="cinfo-footer">
+                    <h5>SUNANDAN DASGUPTA</h5>
+                    <p>
+                        <a href="tel:+919820934218">+91-9820934218</a><br>
+                        <a href="mailto:sunandandasgupta.nmims@gmail.com">sunandandasgupta.nmims@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class=" row footer-bottom">
+            <div class="col-twelve">
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <i class="icon-arrow-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+
+    <!--Preloader-->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs
+                               " title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="preloader">
+        <div id="loader">
+            <div class="scpreloader"><img src="{% static 'images/sclogo.png' %}" style="width:200px;"></div>
+        </div>
+    </div>
+    <!--Preloader-->
+  
+    <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/9959-js-plugins.js' %}"></script>
+    <script src="{% static 'js/320-js-main.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin="anonymous"></script>
+        <script>
+            var j = 1;
+        </script>
+    <script src="{% static 'js/earth-blogs.js' %}"></script>
+  
+  
+  <script>
+    $(window).scroll(function () {
+      var sTop = $(this).scrollTop();
+      if (sTop >= 1500) {
+        $(".service-text").addClass("animmovedown");
+      }
+
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,425 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Social Conclave</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="preload" href="{% static 'images/sclogo.png' %}" as="image">
+  <link rel="preload" href="{% static 'images/earthRing.png' %}" as="image">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/blogscss.css' %}">
+
+  <script src="{% static 'js/modernizr.js' %}"></script>
+  <script src="{% static 'js/pace.min.js' %}"></script>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+  <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+
+  <style>
+    .blogHeader {
+      display: block;
+    }
+
+    .home-content__buttons .btn {
+      padding: 1.5rem 0.75rem !important;
+    }
+    .header-logo {
+        top: 41px;
+    }
+  </style>
+
+
+</head>
+
+<body id="top">
+    
+    <!-- Header -->
+    <header class="s-header">
+        <div class="header-logo">
+            <a class="site-logo" href="{% url 'main:landing-page' %}">
+                <div class="headlinelogo">
+                    <canvas id="headlinelogocanvas"></canvas>
+                    <img class="scEarth" src="{% static 'images/earthRing.png' %}" alt="Social Impact Logo" />
+                </div>
+                <img class="scLogotxt" src="{% static 'images/socialconclave.png' %}" alt="Homepage">
+            </a>
+        </div>
+        <!-- PC Nav -->
+        <nav id="bigone" class="header-nav1">
+            <div class="header-nav__content1">
+                <ul class="header-nav__list">
+                    <li><a href="{% url 'main:landing-page' %}" title="home">Home</a></li>
+                    <li><a href="https://www.socialconclave.com/#about" title="about">About Us</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li>
+                    <li class="current"><a href="{% url 'core:overTheYears' %}" title="our team">Our Team</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact" title="contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /PC Nav -->
+        <!-- Mobile Nav -->
+        <nav id="smallone" class="con" style="float:right;" onclick="myFunction();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </nav>
+        <!-- /Mobile Nav -->
+    </header>
+    <!-- /Header -->
+    
+    <!-- Mobile Menu -->
+    <div id="myNav" class="ov">
+        <div class="ov-content">
+            <a href="{% url 'main:landing-page' %}" title="home" onclick="myFunction();">Home</a>
+            <a href="https://www.socialconclave.com/#about" title="about" onclick="myFunction();">About Us</a>
+            <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a>
+            <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a>
+            <a class="smoothscroll" href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our Team</a>
+            <a class="smoothscroll" href="https://www.socialconclave.com/#contact" title="contact" onclick="myFunction();">Contact</a>
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+
+
+  <section id="home" class="s-home target-section" data-parallax="scroll"
+    data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
+    data-position-y="center">
+    <div class="overlay"></div>
+    <div class="shadow-overlay"></div>
+    <div class="home-content">
+      <div class="row home-content__main blogHeader">
+        <div class="">
+          <h3>Social Conclave Blogs</h3>
+        </div>
+        <div class="">
+          <h1 style="margin-bottom:0px;">
+            The Social Stigma Against Men's Mental Health</h1>
+        </div>
+
+        <div class="home-content__buttons">
+          <a href="{% url 'core:overTheYears' %}" class="btn btn--stroke">
+            More About Us
+          </a>
+        </div>
+      </div>
+      <!--<div class="home-content__scroll">
+                    <a href="#about" class="scroll-link smoothscroll">
+                        <span>Scroll Down</span>
+                    </a>
+                </div>-->
+      <!--<div class="home-content__line"></div>
+            </div>-->
+      <ul class="home-social">
+        <li>
+          <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+              aria-hidden="true"></i><span>Facebook</span></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+              aria-hidden="true"></i><span>Twitter</span></a>
+        </li>
+        <li>
+          <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+              aria-hidden="true"></i><span>Instagram</span></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+              aria-hidden="true"></i><span>LinkedIn</span></a>
+        </li>
+      </ul>
+  </section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-11">
+                        <h1 class="blogheading">The Social Stigma Against Men's Mental Health</h1><br>
+        <div class="div1">
+          <p class="div1para">Attention to men's mental issues has increased substantially in the last few years as
+            social media influencers, content
+            creators, activists complemented by experts in criminology, psychology, and education have successfully
+            agitated the
+            society. However, as opposed to women, men are three times more likely to perpetrate suicide in Australia,
+            3.5 times
+            more likely in the US, and more than four times in Russia and Argentina.
+            <br><br>
+            Nevertheless, psychiatric surveys
+            routinely
+            indicate that men have a significantly lower prevalence than women of common mental disorders, at a ratio of
+            approximately 1:2. The discrepancy between men's low recorded rates of mental illnesses and high rates of
+            suicide are
+            the most compelling evidence that there is indeed a "silent crisis" in men's mental health that is not being
+            sufficiently addressed.
+
+            <br><br>
+          </p>
+          <img class="div1img" src="{% static 'images/ManMindset-1.jpg' %}"><br><br>
+        </div>
+        <div class="div2">
+          <p id="div2para"><br><br>Researchers Nolen-Hoeksma and Girgus have implied that men are known to blunt the
+            reporting of possible mental distress
+            symptoms because they are accustomed to believing that these symptoms are inconsistent with the dominant
+            notions of
+            masculinity. Hence, in contrast to women, who "act-in" in case of psychological suffering, men tend to
+            "act-out." This
+            "acting-out" is often in the form of alcohol and drug abuse, risk-taking, weak impulse control, and
+            increased anger and
+            irritability. These behaviours are considered to be more consistent with society's notions of manliness, in
+            place of
+            crying or even talking about their feelings.
+            <br><br>
+            However, the standard interpretation that men's underutilization of mental health resources is due to the
+            man's
+            stubbornness can be reasonably construed as "victim-blaming." We have chosen to ignore the villainous role
+            played by the
+            societal deterrents such as the typical "log kya kaheingein?", "be a man", "boys don't cry'' mentality which
+            has caused
+            substantial damage to not only an ailing man's will to seek help but also our public resource system's duty
+            to provide
+            service to said men. Numerous studies have inferred that healthcare workers are both less likely to diagnose
+            mental
+            illness in men than women & are less likely to act upon mental illness in men even on detection.
+            <br><br>
+          </p>
+        </div>
+        <div class="div3">
+          <h1 class="div3quote">“Mental illness is nothing to be ashamed of, but stigma and bias shame us all.” <br>–
+            Bill
+            Clinton</h1>
+        </div>
+        <div class="div1">
+          <p class="div1para">Let us look at some common risk factors now:
+            <br><br> <b>1. Occupation-related stress</b> is one of the leading causes of depression and anxiety in men.
+            Research indicates that unemployment can be a continuous
+            cause for stress, whereas being laid-off can be an acute stressor. This is mainly because work, i.e.
+            "winning bread for
+            the family", has been made the domain from which a man derives his self-worth. Studies have proven that low
+            job security
+            and dispute that resulted from competing family and work responsibilities were predictive of extreme mental
+            distress in
+            men. In contrast to this, moderate levels of pressure in the work environment were found to alleviate
+            anxiety and
+            depression in men, signifying the substantial role of 'employment' regarding men's mental health.
+            <br><br>
+          </p>
+          <img class="div1img" src="{% static 'images/ManMindset-3.jpg' %}"><br><br>
+        </div>
+        <div class="div2">
+          <p id="div2para"> <b>2. Adverse childhood experiences</b> are also a causative factor of mental trauma in men.
+            Regardless of how unpleasant it sounds, childhood abuse is
+            abundantly prevalent in both boys and girls. However, some forms of abuse are likelier to happen to girls
+            than boys, and
+            vice versa. While more girls than boys are victims of childhood sexual abuse, boys fall prey to more
+            physical abuse than
+            girls. As per extensive research, abused girls tend to display conventional mental health symptoms, such as
+            low
+            self-esteem, self-harm and disordered eating, which, although requiring much care, are comparatively easier
+            to diagnose
+            and treat. On the contrary, as previously discussed, boys display a constellation of delinquent behaviours,
+            such as
+            violence, recreational drug use, smoking, etc., lead to a disciplinary response. Being unable to attribute
+            this
+            disruptive behaviour to mental unhealthiness, officials at educational centres and elsewhere punish the
+            child, allowing
+            the illness or trauma to go untreated.
+            <br><br>
+          </p>
+        </div>
+        <div class="div1">
+          <p class="div1para">3. Numerous contemporary researches have diagnosed a mostly undetected disease, known as
+            <b>Paternal Postpartum Depression</b> (PPD), which affects 10.4% of fathers. Various factors, such as a
+            genetic history of depression, marital friction,
+            accidental pregnancy, and poverty, contribute to PPD. Hormonal changes preceding the birth of the child are
+            also greatly
+            contributive to exacerbating PPD. For example, to make a new father more sympathetic and less aggressive to
+            the sound of
+            his crying baby, the body undergoes momentous changes such as a decline in the level of testosterone.
+            However, low
+            testosterone levels may cause depression and impair father-infant bonding, leading to a father's worsening
+            mood.
+            <br><br>
+          </p>
+          <img class="div1img" src="{% static 'images/ManMindset-4.jpg' %}"><br><br>
+        </div>
+        <div class="div2">
+          <p id="div2para">The above-discussed factors are a mere preview into the deeper labyrinth of the complications
+            involved with men's mental
+            health.
+            Society's deficit-based models need to be abolished, and concrete reforms need to be initialized and
+            implemented,
+            especially regarding the development of 'men-friendly' help centres.
+            For many men, especially if you are suffering from depression, reaching out for help can seem incredibly
+            overwhelming.
+            <br><br>
+            The ability to develop and cherish close relationships is a vital step to becoming a friend of your mind. If
+            you feel
+            that you do not have anyone to turn to, remember that you can quickly build new relationships on a planet
+            this populated
+            if you try hard enough. The plethora of resources available online, too, are specifically designed to cater
+            to your
+            needs. No one is immune to the distinctions of the human psyche, so do not let anyone make you feel that
+            your emotions
+            are less valid.
+            <br><br>
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="go-top">
+    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+  </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="row footer-main">
+            <div class="col-four tab-full left footer-subscribe">
+                <h4>Let's talk about</h4>
+                <p>Got an inquiry? Feel free to reach out to us! We're happy to discuss on it.</p>
+                <ul class="contact-social">
+                    <li>
+                        <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+                                aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-three tab-full right footer-desc">
+                <div class="footer-log"></div>
+                <h4>Links</h4>
+                <ul>
+                    <li><a class="smoothscroll" href="https://www.socialconclave.com/">Home</a></li>
+                    <li><a href="{% url 'core:overTheYears' %}">Our Team</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}">Blogs</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-five tab-full right footer-subscribe">
+                <h4>Have any questions?</h4>
+                <div class="cinfo-footer">
+                    <h5>POORVA CHADHA</h5>
+                    <p>
+                        <a href="tel:+918828467640">+91-8828467640</a><br>
+                        <a href="mailto:spoorvachadha.nmims@gmail.com">poorvachadha.nmims@gmail.com</a>
+                    </p>
+                </div>
+                <div class="cinfo-footer">
+                    <h5>SUNANDAN DASGUPTA</h5>
+                    <p>
+                        <a href="tel:+919820934218">+91-9820934218</a><br>
+                        <a href="mailto:sunandandasgupta.nmims@gmail.com">sunandandasgupta.nmims@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class=" row footer-bottom">
+            <div class="col-twelve">
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <i class="icon-arrow-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+
+    <!--Preloader-->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs
+                               " title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="preloader">
+        <div id="loader">
+            <div class="scpreloader"><img src="{% static 'images/sclogo.png' %}" style="width:200px;"></div>
+        </div>
+    </div>
+    <!--Preloader-->
+  
+    <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/9959-js-plugins.js' %}"></script>
+    <script src="{% static 'js/320-js-main.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin="anonymous"></script>
+        <script>
+            var j = 1;
+        </script>
+    <script src="{% static 'js/earth-blogs.js' %}"></script>
+  
+  
+  <script>
+    $(window).scroll(function () {
+      var sTop = $(this).scrollTop();
+      if (sTop >= 1500) {
+        $(".service-text").addClass("animmovedown");
+      }
+
+    });
+  </script>
+</body>
+
+</html>

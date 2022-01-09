@@ -1,0 +1,12 @@
+SET OF IDS
+banner - Top Banner
+fname - Full name
+pimg - Profile Image
+btitle - Blog title
+fpara - First set of paragraphs
+im1 - First Image
+spara - Second set of paragraphs 
+bword - The big words
+tpara - Third set of paragraphs 
+im2 - Second Image
+jpara - Paragraph with image 

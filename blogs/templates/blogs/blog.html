@@ -1,0 +1,369 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Social Conclave</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/blogscss.css' %}">
+
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+</head>
+
+<body id="top">
+    <!-- Header -->
+    <header class="s-header">
+        <div class="header-logo">
+            <a class="site-logo" href="{% url 'main:landing-page' %}">
+                <div class="headlinelogo">
+                    <canvas id="headlinelogocanvas"></canvas>
+                    <img class="scEarth" src="{% static 'images/earthRing.png' %}" alt="Social Impact Logo" />
+                </div>
+                <img class="scLogotxt" src="{% static 'images/socialconclave.png' %}" alt="Homepage">
+            </a>
+        </div>
+        <!-- PC Nav -->
+        <nav id="bigone" class="header-nav1">
+            <div class="header-nav__content1">
+                <ul class="header-nav__list">
+                    <li><a href="{% url 'main:landing-page' %}" title="home">Home</a></li>
+                    <li><a href="https://www.socialconclave.com/#about" title="about">About Us</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li>
+                    <li><a href="{% url 'core:overTheYears' %}" title="our team">Our Team</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact" title="contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /PC Nav -->
+        <!-- Mobile Nav -->
+        <nav id="smallone" class="con" style="float:right;" onclick="myFunction();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </nav>
+        <!-- /Mobile Nav -->
+    </header>
+    <!-- /Header -->
+
+    <!-- Mobile Menu -->
+    <div id="myNav" class="ov">
+        <div class="ov-content">
+            <a href="{% url 'main:landing-page' %}" title="home" onclick="myFunction();">Home</a>
+            <a href="https://www.socialconclave.com/#about" title="about" onclick="myFunction();">About Us</a>
+            <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a>
+            <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a>
+            <a href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our Team</a>
+            <a href="https://www.socialconclave.com/#contact" title="contact" onclick="myFunction();">Contact</a>
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+
+
+
+    <section id="home" class="s-home target-section" data-parallax="scroll"
+        data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
+        data-position-y="center">
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+        <div class="home-content">
+            <div class="row home-content__main">
+                <h3>Welcome to Social Conclave</h3>
+                <br>
+                <h1 style="margin-bottom:0px;">
+                    We strive to spread smiles <br> and impact lives,</h1>
+                <h1 style='margin-top:0px;'>
+                    ONE PROBLEM AT A TIME. <br>
+                </h1>
+                <div class="home-content__buttons">
+                    <a href="{% url 'core:overTheYears' %}" class="btn btn--stroke">
+                        More About Us
+                    </a>
+                </div>
+            </div>
+            <!--<div class="home-content__scroll">
+                    <a href="#about" class="scroll-link smoothscroll">
+                        <span>Scroll Down</span>
+                    </a>
+                </div>-->
+            <!--<div class="home-content__line"></div>
+            </div>-->
+            <ul class="home-social">
+                <li>
+                    <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+                            aria-hidden="true"></i><span>Facebook</span></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+                            aria-hidden="true"></i><span>Twitter</span></a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+                            aria-hidden="true"></i><span>Instagram</span></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+                            aria-hidden="true"></i><span>LinkedIn</span></a>
+                </li>
+            </ul>
+    </section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1">
+                <img class="sideimg" src="{% static 'images/firefox.webp' %}">
+                <p class="sidetext">Loreum Ipsium</p>
+                <hr>
+            </div>
+            <div class="col-md-11">
+                <h1 class="blogheading">How a veteran entrepreneur is helping Microsoft double down on startups</h1><br>
+                <div class="div1">
+                    <p class="div1para">No one would have thought Jeff Ma would land where he did, least of all Ma
+                        himself.
+                        <br><br> For decades, Ma has been known in Silicon Valley as an entrepreneur who launched and
+                        sold several successful and diverse companies. More famously, he was a member of the MIT
+                        blackjack team that won millions from Las Vegas
+                        casinos and the inspiration for the main character in the movie “21” and the book “Bringing Down
+                        the House.” Ma has been an options trader, was a water polo coach for years, is an author and
+                        professional speaker, and has been a
+                        writer and on-air personality for ESPN.
+                        <br><br> He is, in other words, someone who defies easy pigeonholing. And when Ma took on a new
+                        role in the spring, the move raised eyebrows across Silicon Valley’s startup community. The
+                        seasoned entrepreneur with the colorful
+                        and unpredictable career was going to … one of the world’s tech giants?
+                        <br><br> “The fact that he went to Microsoft is a big deal,” said Kevin Compton, former
+                        operating partner at Kleiner Perkins and now co-founder of Radar Partners, a venture capital
+                        firm based in Palo Alto. “People were surprised.
+                        He could have gone anywhere, and he went there.”
+                        <br><br>
+                    </p>
+                    <img class="div1img" src="{% static 'images/hero-bg.jpg' %}"><br><br>
+                </div>
+                <div class="div2">
+                    <p id="div2para">No one would have thought Jeff Ma would land where he did, least of all Ma himself.
+                        <br><br> For decades, Ma has been known in Silicon Valley as an entrepreneur who launched and
+                        sold several successful and diverse companies. More famously, he was a member of the MIT
+                        blackjack team that won millions from Las Vegas
+                        casinos and the inspiration for the main character in the movie “21” and the book “Bringing Down
+                        the House.” Ma has been an options trader, was a water polo coach for years, is an author and
+                        professional speaker, and has been a
+                        writer and on-air personality for ESPN.
+                        <br><br> He is, in other words, someone who defies easy pigeonholing. And when Ma took on a new
+                        role in the spring, the move raised eyebrows across Silicon Valley’s startup community. The
+                        seasoned entrepreneur with the colorful
+                        and unpredictable career was going to … one of the world’s tech giants?
+                        <br><br> “The fact that he went to Microsoft is a big deal,” said Kevin Compton, former
+                        operating partner at Kleiner Perkins and now co-founder of Radar Partners, a venture capital
+                        firm based in Palo Alto. “People were surprised.
+                        He could have gone anywhere, and he went there.”
+                        <br><br>
+                    </p>
+                </div>
+                <div class="div3">
+                    <h1 class="div3quote">" Six months into the job, Jeff Ma is proactively seeking out targeted
+                        startups and strengthening Microsoft’s presence in Silicon Valley. "</h1><br><br>
+                </div>
+                <div class="div2">
+                    <p id="div2para">No one would have thought Jeff Ma would land where he did, least of all Ma himself.
+                        <br><br> For decades, Ma has been known in Silicon Valley as an entrepreneur who launched and
+                        sold several successful and diverse companies. More famously, he was a member of the MIT
+                        blackjack team that won millions from Las Vegas
+                        casinos and the inspiration for the main character in the movie “21” and the book “Bringing Down
+                        the House.” Ma has been an options trader, was a water polo coach for years, is an author and
+                        professional speaker, and has been a
+                        writer and on-air personality for ESPN.
+                        <br><br> He is, in other words, someone who defies easy pigeonholing. And when Ma took on a new
+                        role in the spring, the move raised eyebrows across Silicon Valley’s startup community. The
+                        seasoned entrepreneur with the colorful
+                        and unpredictable career was going to … one of the world’s tech giants?
+                        <br><br> “The fact that he went to Microsoft is a big deal,” said Kevin Compton, former
+                        operating partner at Kleiner Perkins and now co-founder of Radar Partners, a venture capital
+                        firm based in Palo Alto. “People were surprised.
+                        He could have gone anywhere, and he went there.”
+                        <br><br>
+                    </p>
+                </div>
+                <div class="div4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="div4leftimg" src="{% static 'images/portfolio/guitarist.jpg' %}">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="div4rightpara">No one would have thought Jeff Ma would land where he did, least of
+                                all Ma himself.<br><br> For decades, Ma has been known in Silicon Valley as an
+                                entrepreneur who launched and sold several successful and diverse companies.
+                                More famously, he was a member of the MIT blackjack team that won millions from Las
+                                Vegas casinos and the inspiration for the main character in the movie “21” and the book
+                                “Bringing Down the House.” Ma has been an options
+                                trader, was a water polo coach for years, is an author and professional speaker, and has
+                                been a writer and on-air personality for ESPN.
+                                <br><br> He is, in other words, someone who defies easy pigeonholing. And when Ma took
+                                on a new role in the spring, the move raised eyebrows across Silicon Valley’s startup
+                                community. The seasoned entrepreneur with the
+                                colorful and unpredictable career was going to … one of the world’s tech giants?
+                                <br><br> “The fact that he went to Microsoft is a big deal,” said Kevin Compton, former
+                                operating partner at Kleiner Perkins and now co-founder of Radar Partners, a venture
+                                capital firm based in Palo Alto. “People were
+                                surprised. He could have gone anywhere, and he went there.”
+                                <br><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="go-top">
+        <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row footer-main">
+            <div class="col-four tab-full left footer-subscribe">
+                <h4>Let's talk about</h4>
+                <p>Got an inquiry? Feel free to reach out to us! We're happy to discuss on it.</p>
+                <ul class="contact-social">
+                    <li>
+                        <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+                                aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-three tab-full right footer-desc">
+                <div class="footer-log"></div>
+                <h4>Links</h4>
+                <ul>
+                    <li><a class="smoothscroll" href="https://www.socialconclave.com/">Home</a></li>
+                    <li><a href="{% url 'core:overTheYears' %}">Our Team</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}">Blogs</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-five tab-full right footer-subscribe">
+                <h4>Have any questions?</h4>
+                <div class="cinfo-footer">
+                    <h5>POORVA CHADHA</h5>
+                    <p>
+                        <a href="tel:+918828467640">+91-8828467640</a><br>
+                        <a href="mailto:spoorvachadha.nmims@gmail.com">poorvachadha.nmims@gmail.com</a>
+                    </p>
+                </div>
+                <div class="cinfo-footer">
+                    <h5>SUNANDAN DASGUPTA</h5>
+                    <p>
+                        <a href="tel:+919820934218">+91-9820934218</a><br>
+                        <a href="mailto:sunandandasgupta.nmims@gmail.com">sunandandasgupta.nmims@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class=" row footer-bottom">
+            <div class="col-twelve">
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <i class="icon-arrow-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+
+    <!--Preloader-->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs
+                               " title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="preloader">
+        <div id="loader">
+            <div class="scpreloader"><img src="{% static 'images/sclogo.png' %}" style="width:200px;"></div>
+        </div>
+    </div>
+    <!--Preloader-->
+    
+    <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/9959-js-plugins.js' %}"></script>
+    <script src="{% static 'js/320-js-main.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin=" anonymous"></script>
+    <script src="{% static 'js/earth.js' %}"></script> 
+    
+    <script>
+        $(window).scroll(function () {
+            var sTop = $(this).scrollTop();
+            if (sTop >= 1500) {
+                $(".service-text").addClass("animmovedown");
+            }
+
+        });
+    </script>
+</body>
+
+</html>

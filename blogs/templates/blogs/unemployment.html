@@ -1,0 +1,496 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Social Conclave</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="preload" href="{% static 'images/sclogo.png' %}" as="image">
+  <link rel="preload" href="{% static 'images/earthRing.png' %}" as="image">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/blogscss.css' %}">
+
+  <script src="{% static 'js/modernizr.js' %}"></script>
+  <script src="{% static 'js/pace.min.js' %}"></script>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+  <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+
+  <style>
+    .blogHeader {
+      display: block;
+    }
+
+    .home-content__buttons .btn {
+      padding: 1.5rem 0.75rem !important;
+    }
+    .header-logo {
+        top: 41px;
+    }
+  </style>
+
+
+</head>
+
+<body id="top">
+    
+    <!-- Header -->
+    <header class="s-header">
+        <div class="header-logo">
+            <a class="site-logo" href="{% url 'main:landing-page' %}">
+                <div class="headlinelogo">
+                    <canvas id="headlinelogocanvas"></canvas>
+                    <img class="scEarth" src="{% static 'images/earthRing.png' %}" alt="Social Impact Logo" />
+                </div>
+                <img class="scLogotxt" src="{% static 'images/socialconclave.png' %}" alt="Homepage">
+            </a>
+        </div>
+        <!-- PC Nav -->
+        <nav id="bigone" class="header-nav1">
+            <div class="header-nav__content1">
+                <ul class="header-nav__list">
+                    <li><a href="{% url 'main:landing-page' %}" title="home">Home</a></li>
+                    <li><a href="https://www.socialconclave.com/#about" title="about">About Us</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li>
+                    <li class="current"><a href="{% url 'core:overTheYears' %}" title="our team">Our Team</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact" title="contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /PC Nav -->
+        <!-- Mobile Nav -->
+        <nav id="smallone" class="con" style="float:right;" onclick="myFunction();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </nav>
+        <!-- /Mobile Nav -->
+    </header>
+    <!-- /Header -->
+    
+    <!-- Mobile Menu -->
+    <div id="myNav" class="ov">
+        <div class="ov-content">
+            <a href="{% url 'main:landing-page' %}" title="home" onclick="myFunction();">Home</a>
+            <a href="https://www.socialconclave.com/#about" title="about" onclick="myFunction();">About Us</a>
+            <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a>
+            <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a>
+            <a class="smoothscroll" href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our Team</a>
+            <a class="smoothscroll" href="https://www.socialconclave.com/#contact" title="contact" onclick="myFunction();">Contact</a>
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+
+
+  <section id="home" class="s-home target-section" data-parallax="scroll"
+    data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
+    data-position-y="center">
+    <div class="overlay"></div>
+    <div class="shadow-overlay"></div>
+    <div class="home-content">
+      <div class="row home-content__main blogHeader">
+        <div class="">
+          <h3>Social Conclave Blogs</h3>
+        </div>
+        <div class="">
+          <h1 style="margin-bottom:0px;">
+            Unemployment</h1>
+        </div>
+
+        <div class="home-content__buttons">
+          <a href="{% url 'core:overTheYears' %}" class="btn btn--stroke">
+            More About Us
+          </a>
+        </div>
+      </div>
+      <!--<div class="home-content__scroll">
+                    <a href="#about" class="scroll-link smoothscroll">
+                        <span>Scroll Down</span>
+                    </a>
+                </div>-->
+      <!--<div class="home-content__line"></div>
+            </div>-->
+      <ul class="home-social">
+        <li>
+          <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+              aria-hidden="true"></i><span>Facebook</span></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+              aria-hidden="true"></i><span>Twitter</span></a>
+        </li>
+        <li>
+          <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+              aria-hidden="true"></i><span>Instagram</span></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+              aria-hidden="true"></i><span>LinkedIn</span></a>
+        </li>
+      </ul>
+  </section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-11">
+                <h1 class="blogheading">Unemployment</h1><br>
+        <div class="div1">
+          <p class="div1para">The global employment rate was no better before the COVID-19 pandemic, yet it has
+            worsened, increasing the unemployment
+            rate by 1.1 percentage points to 6.5 percentage which has left more than 33 million people unemployed,
+            taking the global
+            total to 220 million in 2020. This increase is far larger than that observed during the global financial
+            crisis of 2008,
+            one of the worst economic disasters of modern times, when the increase in employment rate was 0.6%.
+            <br><br>
+            In contrast to the
+            global financial crisis of 2008, the COVID-19 crisis has affected labour markets worldwide, leading to
+            greater job
+            losses and unemployment spikes everywhere including low and middle income countries, which weren't hit as
+            hard during
+            the global financial crisis. The International Labour Organisation estimated that by June 30, COVID-19
+            eliminated 277
+            billion hours of paid work, the equivalent of 400 million full-time jobs.
+
+            <br><br>
+          </p>
+          <img class="div1img" src="{% static 'images/unemployment-4.png' %}"><br><br>
+        </div>
+        <div class="div2">
+          <p id="div2para"><br><br>When pondering upon the term unemployment, one generally believes that it refers to a
+            person who was unable to get a job
+            post reaching a particular age, but that isn’t the case. When calculating the Labour Force Participation
+            Rate which is
+            measured by diving the total labour force by the working age population, it must be realised that the
+            working age
+            includes those aged 15 and above, therefore, it also accounts for those people who are unemployed simply
+            because they
+            are not wishing to be employed for a myriad of reasons. The global average Labour force participation rate
+            today stands
+            at 61%.
+            <br><br>
+            According to CMIE (Centre for Monitoring Indian Economy), the unemployment rate in India is 7% (7% in urban
+            areas and
+            7.1% in rural areas). The younger popu-lous in India has a high unemployment rate, with almost half the
+            demography
+            falling under the category. The unemployment rate in the age group of 20-24 is 46.4%. Unemployment has
+            several adverse
+            impacts on a person including disillusionment, frustration, and dissatisfaction. This gives rise to cynicism
+            and
+            dissipates the energy of the youth towards destructive directions.
+            <br><br>Thus, it isn’t impossible to see why they wouldn’t
+            resort to crime, violence, anti-social activities or even worse, seek the easier path to achieve the much
+            sought-after
+            social status. But it doesn’t just stop there, suicidal tendencies are also on an increase due to the social
+            humiliation
+            and deprivation that the unemployed status attracts from society.
+
+
+
+            <br><br>
+          </p>
+        </div>
+        <div class="div3">
+          <h1 class="div3quote">"There is no such thing as an acceptable level of unemployment, because hunger is not
+            acceptable, poverty is not
+            acceptable, poor health is not acceptable, and a ruined life is not acceptable." <br>
+            ~Hubert H. Humphrey</h1>
+        </div>
+        <div class="div2">
+          <p id="div2para">In order to tackle the over looming issue of unemployment it is imperative that we try to
+            understand its root causes,
+            some of which are as follows:
+            <br><br> 1. Slow rate of economic growth: Okun's law explains the inverse relationship between the growth
+            rate and the unemployment
+            rate. A slow economic process rate indicates that not enough jobs are being created hire the workers able
+            and willing to
+            work.
+            <br><br>
+          </p>
+        </div>
+        <div class="div2">
+          <p id="div2para"> 2. Increase in population growth rate: India has a population of 1.38 billion and a
+            population growth rate of almost 1%.
+            The rising population has a serious implication on various socio-economic factors. The population has
+            crossed the
+            optimum limit in India and has become a liability. So, the problem of overpopulation in India has proved to
+            be a big
+            obstacle in the success of economic planning and development. A rapidly increasing population reduces
+            income, savings,
+            and investment. Thus, capital formation is retarded thus creating a burden on the number of jobs that can
+            actually be
+            created in an economy with its limited resources., thereby increasing unemployment. Overpopulation also
+            creates more
+            competition for employment.
+            <br><br>
+          </p>
+        </div>
+        <div class="div2">
+          <p id="div2para">3. Over-dependence on technology: An increase in the pace of technological change can have
+            two profound side effects in the
+            labour market. It can increase the rate and therefore the average duration of unemployment. Because firms
+            might not
+            consider it cost-effective to retrain some kinds of workers to keep up with change, notably the
+            less-educated and the
+            older employees, these workers could also be jobless for long periods, with a number of them perhaps never
+            working
+            again. But technology both eliminates and creates jobs. Generally, it destroys low wages, low productivity
+            jobs, but it
+            also creates jobs that are more productive, high-skill, and better paid.
+            Advancements in technology and the advent of digitisation mean that firms have the ability to produce goods
+            with fewer
+            workers, thus reducing the blue-collar worker force but at the same time, the increased productivity in
+            manufactured
+            goods mean that the relative cost falls whilst creating a demand in the service sector.
+
+            <br><br>
+          </p>
+        </div>
+        <div class="div1">
+          <p class="div1para"> 4. Caste system: In India, the caste system is predominant and is influential in the
+            con-text of getting employed. It is
+            evident that employment opportunities are denied to particular castes in certain regions and the ideology of
+            non-discriminatory employ-ment on the basis of skill and ability is not upheld. Thus, there is an increase
+            in
+            un-employment rates for lack of fair opportunities.
+
+            <br><br>
+          </p>
+          <img class="div1img" src="{% static 'images/unemployment-1.png' %}"><br><br>
+        </div>
+        <div class="div2">
+          <p id="div2para">5. Skill gap: Skill gap occurs when the demand and supply sides of the employment market
+            don't match. It is the persistent
+            disconnect existing between the abilities needed by a corporation and therefore the present capabilities of
+            its
+            workforce. The skill gap in India remains a significant issue impeding the growth potentials of the economy.
+            The
+            International Labour Organisation (ILO) believes that India is staring at a 29 million skill-deficit by
+            2030. Accenture
+            projects that the skill gap in India will cause a loss of $1.97 trillion in terms of gross domestic product
+            promised by
+            investment in intelligent technologies over the 10 years if it is not controlled.
+
+            <br><br>
+            Many factors are attributed to causing the skill gap in India but the primary cause of this problem is the
+            failure of
+            the educational system. It encourages students to think that talent is measured by the grades of the
+            students. Practical
+            knowledge and appli-cation of whatever they learn within the confines of a classroom are necessary, this is
+            another
+            factor that is overlooked in the educational system. Most students are unable to process and understand the
+            concept of
+            what is being taught in class and resort to rote learning for examinations. Bridging the skills gap between
+            work and
+            education is imperative to sustain the productivity and growth of the economy.
+          </p>
+        </div>
+        <div class="div1">
+          <p class="div1para"> But that doesn’t mean that the authorities have been oblivious to this issue. Till date
+            about 2 crore migrant workers
+            are provided Rs.5000 crores directly in their bank accounts from building and other construction workers
+            ‘cess fund’
+            being maintained by various states. In order to resolve the complaints of migrant workers during lockdown,
+            the Ministry
+            of Labour and Employment had initiated 20 Control Rooms all over the country and over 15000 grievances of
+            the workers
+            were resolved through these Control Rooms.
+
+            <br><br>
+          </p>
+          <img class="div1img" src="{% static 'images/unemployment-3.png' %}"><br><br>
+        </div>
+
+        <div class="div2">
+          <p id="div2para">Another aspect that the government is scrutinising is using the infrastructure of skill
+            development ministry’s ITIs to
+            impart skills to workers to prepare them for job op-portunities within the pandemic-affected world. The
+            skill
+            development ministry, led by Mahendra Nath Pandey, is already holding consultations with various sector
+            skill councils
+            to enhance the employability of the country’s workforce.
+            <br><br>
+            Amidst the Covid recovery phase, the government launched a new scheme called Atma Nirbhar Bharat Rozgar
+            Yojana to
+            incentivise creation of new employment op-portunities. Under this scheme the central government would
+            provide subsidy
+            for two years in respect of new eligible employees after 1st October 2020. Several initiatives were taken by
+            the
+            government to curb unemployment like integrated Rural Development Programme, Aatmanirbhar Bharat Abhiyan,
+            Robust and
+            Resilient Agricultural Sector, Strong and Diversified Industrial and Infrastructural Base.
+            <br><br>
+            Many countries have adopted different strategies to try to mitigate the worst of the effects. The key
+            elements that are
+            most required in this situation are models for man-aging labour market shocks, which will not only provide
+            effective
+            protection in the short run but also offer extended support where the shock persists or reoccurs (as seems
+            to be the
+            case with Covid-19). Ultimately, successful policy approaches will need to be well suited for enabling job
+            creation on a
+            large scale.
+
+
+            <br><br>
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="go-top">
+    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+  </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="row footer-main">
+            <div class="col-four tab-full left footer-subscribe">
+                <h4>Let's talk about</h4>
+                <p>Got an inquiry? Feel free to reach out to us! We're happy to discuss on it.</p>
+                <ul class="contact-social">
+                    <li>
+                        <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+                                aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-three tab-full right footer-desc">
+                <div class="footer-log"></div>
+                <h4>Links</h4>
+                <ul>
+                    <li><a class="smoothscroll" href="https://www.socialconclave.com/">Home</a></li>
+                    <li><a href="{% url 'core:overTheYears' %}">Our Team</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}">Blogs</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-five tab-full right footer-subscribe">
+                <h4>Have any questions?</h4>
+                <div class="cinfo-footer">
+                    <h5>POORVA CHADHA</h5>
+                    <p>
+                        <a href="tel:+918828467640">+91-8828467640</a><br>
+                        <a href="mailto:spoorvachadha.nmims@gmail.com">poorvachadha.nmims@gmail.com</a>
+                    </p>
+                </div>
+                <div class="cinfo-footer">
+                    <h5>SUNANDAN DASGUPTA</h5>
+                    <p>
+                        <a href="tel:+919820934218">+91-9820934218</a><br>
+                        <a href="mailto:sunandandasgupta.nmims@gmail.com">sunandandasgupta.nmims@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class=" row footer-bottom">
+            <div class="col-twelve">
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <i class="icon-arrow-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+
+    <!--Preloader-->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs
+                               " title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="preloader">
+        <div id="loader">
+            <div class="scpreloader"><img src="{% static 'images/sclogo.png' %}" style="width:200px;"></div>
+        </div>
+    </div>
+    <!--Preloader-->
+  
+    <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/9959-js-plugins.js' %}"></script>
+    <script src="{% static 'js/320-js-main.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin="anonymous"></script>
+        <script>
+            var j = 1;
+        </script>
+    <script src="{% static 'js/earth-blogs.js' %}"></script>
+  
+  
+  <script>
+    $(window).scroll(function () {
+      var sTop = $(this).scrollTop();
+      if (sTop >= 1500) {
+        $(".service-text").addClass("animmovedown");
+      }
+
+    });
+  </script>
+</body>
+
+</html>

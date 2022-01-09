@@ -1,0 +1,466 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Social Conclave</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="preload" href="{% static 'images/sclogo.png' %}" as="image">
+  <link rel="preload" href="{% static 'images/earthRing.png' %}" as="image">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/blogscss.css' %}">
+
+  <script src="{% static 'js/modernizr.js' %}"></script>
+  <script src="{% static 'js/pace.min.js' %}"></script>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
+  <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+
+  <style>
+    .blogHeader {
+      display: block;
+    }
+
+    .home-content__buttons .btn {
+      padding: 1.5rem 0.75rem !important;
+    }
+    .header-logo {
+        top: 41px;
+    }
+  </style>
+
+
+</head>
+
+<body id="top">
+    
+    <!-- Header -->
+    <header class="s-header">
+        <div class="header-logo">
+            <a class="site-logo" href="{% url 'main:landing-page' %}">
+                <div class="headlinelogo">
+                    <canvas id="headlinelogocanvas"></canvas>
+                    <img class="scEarth" src="{% static 'images/earthRing.png' %}" alt="Social Impact Logo" />
+                </div>
+                <img class="scLogotxt" src="{% static 'images/socialconclave.png' %}" alt="Homepage">
+            </a>
+        </div>
+        <!-- PC Nav -->
+        <nav id="bigone" class="header-nav1">
+            <div class="header-nav__content1">
+                <ul class="header-nav__list">
+                    <li><a href="{% url 'main:landing-page' %}" title="home">Home</a></li>
+                    <li><a href="https://www.socialconclave.com/#about" title="about">About Us</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li>
+                    <li class="current"><a href="{% url 'core:overTheYears' %}" title="our team">Our Team</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact" title="contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /PC Nav -->
+        <!-- Mobile Nav -->
+        <nav id="smallone" class="con" style="float:right;" onclick="myFunction();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </nav>
+        <!-- /Mobile Nav -->
+    </header>
+    <!-- /Header -->
+    
+    <!-- Mobile Menu -->
+    <div id="myNav" class="ov">
+        <div class="ov-content">
+            <a href="{% url 'main:landing-page' %}" title="home" onclick="myFunction();">Home</a>
+            <a href="https://www.socialconclave.com/#about" title="about" onclick="myFunction();">About Us</a>
+            <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a>
+            <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a>
+            <a class="smoothscroll" href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our Team</a>
+            <a class="smoothscroll" href="https://www.socialconclave.com/#contact" title="contact" onclick="myFunction();">Contact</a>
+        </div>
+    </div>
+    <!-- /Mobile Menu -->
+
+
+  <section id="home" class="s-home target-section" data-parallax="scroll"
+    data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
+    data-position-y="center">
+    <div class="overlay"></div>
+    <div class="shadow-overlay"></div>
+    <div class="home-content">
+      <div class="row home-content__main blogHeader">
+        <div class="">
+          <h3>Social Conclave Blogs</h3>
+        </div>
+        <div class="">
+          <h1 style="margin-bottom:0px;">
+            Women’s Safety</h1>
+        </div>
+
+        <div class="home-content__buttons">
+          <a href="{% url 'core:overTheYears' %}" class="btn btn--stroke">
+            More About Us
+          </a>
+        </div>
+      </div>
+      <!--<div class="home-content__scroll">
+                    <a href="#about" class="scroll-link smoothscroll">
+                        <span>Scroll Down</span>
+                    </a>
+                </div>-->
+      <!--<div class="home-content__line"></div>
+            </div>-->
+      <ul class="home-social">
+        <li>
+          <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+              aria-hidden="true"></i><span>Facebook</span></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+              aria-hidden="true"></i><span>Twitter</span></a>
+        </li>
+        <li>
+          <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+              aria-hidden="true"></i><span>Instagram</span></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+              aria-hidden="true"></i><span>LinkedIn</span></a>
+        </li>
+      </ul>
+  </section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-11">
+        <h1 class="blogheading">Women’s Safety</h1><br>
+        <div class="div1">
+          <p class="div1para">Women comprise roughly 48% of the Indian population. If about half the population lives
+            under constant fear and
+            oppression, can India really think of progress?
+            <br><br>
+            Even after 73 years of Independence, our country's women do not enjoy freedom - they still feel gravely
+            unsafe in their
+            bodies. It is the collective responsibility of society, rather than just the government, to ensure our
+            women's safety,
+            and it is high time that we take collective action against this menace. As grossly misinterpreted sometimes,
+            women's
+            safety is not restricted to "making our cities safer for women," as many policymakers have not failed to
+            promise in
+            their rallies. <br><br>The establishment of safe spaces for reporting crimes and recuperating from them, in
+            tandem
+            with the
+            liberation of women from the mental trauma involved due to fear or insecurity, also fall within the ambit of
+            'women's
+            safety.'
+
+            <br><br>
+          </p>
+          <img class="div1img" src="{% static 'images/womenSafety-1.png' %}"><br><br>
+        </div>
+        <div class="div2">
+          <p id="div2para"><br><br>According to the National Crimes Records Bureau (NCRB), India recorded 32033 rape
+            cases in
+            2019 - that is 88 rape cases
+            every day. A woman falls prey to a crime every minute. A woman is raped every 15 minutes and murdered every
+            35 minutes
+            in India.
+            With this generation being the most "woke" of all, as we so proudly claim on our social media handles, with
+            impeccable
+            awareness of all social evils, why is it that the vulnerability of a woman or even a little girl today has
+            increased up
+            to 44% in the last ten years? And these numbers are merely the 'recorded' cases. <br><br>According to
+            numerous
+            studies in this
+            field, it is very likely that countless women across the country are too oppressed and afraid to report an
+            offender due
+            to the degree of her abuse and the stigmatization involved with the subject.
+
+
+            <br><br>
+          </p>
+        </div>
+        <div class="div3">
+          <h1 class="div3quote"></h1>
+        </div>
+        <div class="div2">
+          <p id="div2para">Let's look at some (of the many, unfortunately) causes why a female's life's substantial
+            proportion is
+            wasted in trying
+            to infer whether "is this city really safe, though?"
+            <br><br> 1. <b>Delay in decision making, and execution of punishments </b><br><br> The 2012 gang rape and
+            murder
+            case of
+            23-year-old Jyoti Singh
+            "Nirbhaya" was deliberated for eight years before four of the convicted were finally executed on 20th March
+            2020. Such
+            prolonged execution of justice is one of the leading factors of continued female abuse. Although the
+            government
+            introduced fast-track courts after a gruesome assault on a student in a Delhi bus shocked the country in
+            2012, to deal
+            with sensitive cases like these. However, it still did not deter the miscreants. <br><br>Not only does
+            prolonged
+            justice take
+            away the public's faith in the judiciary, but it also eases the pressure on would-be perpetrators.
+            Furthermore, the
+            absolute anguish that the victim and their families go through is exacerbated every time the topic is up for
+            deliberation. The agony involved with having to relive the worst possible day of your life and having to
+            directly, indirectly face those responsible, complemented by
+            the quips of our very opinionated society, are unimaginable.
+            <br><br>
+          </p>
+        </div>
+        <div class="div1">
+          <p class="div1para"> <b>2. Misogynistic portrayal of women by the entertainment industry</b><br><br>
+            The constant intake
+            of media content in which women are
+            portrayed as weak or entirely dependent upon their male counterparts lead to a subtle altering of the
+            viewer's mindset.
+            Being exposed to such material regularly can hurt their perception of women, misconstruing them as "weak"
+            and
+            "dependent."<br><br>It cannot be denied that the entertainment industry has come a long way to cast or
+            portray
+            women in
+            empowering roles. Movies like Mardaani, Kahaani, Neerja, Mission Mangal, and Disney's Moana, Mulan, etc.,
+            are testaments
+            to this. Despite this rising wave of change in the entertainment industry ameliorating women's depiction,
+            there is still
+            a long way to go from here to complete, total emancipation of women from roles that lead to their
+            objectification.
+
+
+            <br><br>
+          </p>
+          <img class="div1img" src="{% static 'images/womenSafety-2.jpg' %}"><br><br>
+        </div>
+        <div class="div2">
+          <p id="div2para"><b>3. Usage of social media without a proper understanding of its drawbacks</b><br><br>
+            It is not very challenging to create a fake identity on social media these days, and thanks to the enhanced
+            social
+            connectivity blessing our generation, establishing contact with strangers is notably convenient. <br><br>Due
+            to
+            these sorts of
+            evils being rampant online, a deficit of thorough knowledge on online resources' usage, exchanging passwords
+            with
+            "friends", sharing exploitable data with other anonymous users, and uploading sensitive information to the
+            cloud, etc.,
+            can cost one dearly. <br><br>There have been many instances of social media being a double edged sword, one
+            should
+            always be
+            careful when using social media as although they brought wonderful gifts to us, none should forget the
+            mischiefs that
+            can be committed too.
+
+            <br><br>
+          </p>
+        </div>
+        <div class="div1">
+          <p class="div1para"> <b>4. Lack of proper training to health-care providers and law enforcement
+              officials</b><br><br>
+            Some law enforcers and professional caregivers fail to care for a victim of abuse with an added sense of
+            sympathy and
+            kindness. Some tend to show disbelief at the woman's report. This deters the woman's will to report abuse,
+            in most
+            trapping her in the cycle of abuse, especially in cases of domestic violence.
+
+            <br><br>
+          </p>
+          <img class="div1img" src="{% static 'images/womenSafety-3.png' %}"><br><br>
+        </div>
+
+        <div class="div2">
+          <p id="div2para">To conclude, having identified some causes of continued violence against women, the need for
+            a radical approach when
+            combatting these evils is a necessity. Article 21 of the Indian Constitution mentions the right to life as
+            the basic
+            fundamental right; this includes the right to live with dignity. Activists, law-enforcers, and even the
+            general public
+            have shown widespread unrest and a diminishing tolerance regarding the lack of stringency about matters like
+            these.<br><br>
+            Social media is flooded with content regarding women's safety, resources for help, hotlines, counselling,
+            and a large
+            proportion of netizens never fail to join hands to combat injustice. A plethora of private organizations for
+            healing and therapy are being set up, especially for women, as the people have
+            come to realize the lack of momentum towards abolishing any wrongdoing towards our country's women. The
+            government, too,
+            is actively working towards the liberation of women from fear and insecurity. Given our country's
+            population, it is very
+            likely that these reforms may take years to set in. Still, perseverance, and zero tolerance towards any
+            female abuse, is
+            the key to our country's progress.<br><br>
+            This problem is deep-rooted and multi-dimensional, and formulating extensive laws alone cannot solve this
+            issue. The
+            attitude of society towards women needs to be changed, which is possible only through heightened awareness
+            and action by
+            individuals. One should take it as their responsibility to treat everyone with the utmost regard, especially
+            women who
+            have lost their sense of security, no matter how big or little it may be in your opinion. Treat every woman
+            with care
+            and implore them to seek help. A few words of kindness and sympathy may not completely heal her wounds, but
+            the next
+            time she heads out, maybe she can wear her scars with renewed pride and a sense of self at the marvel that
+            she is!
+
+
+            <br><br>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="go-top">
+    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+  </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="row footer-main">
+            <div class="col-four tab-full left footer-subscribe">
+                <h4>Let's talk about</h4>
+                <p>Got an inquiry? Feel free to reach out to us! We're happy to discuss on it.</p>
+                <ul class="contact-social">
+                    <li>
+                        <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+                                aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-three tab-full right footer-desc">
+                <div class="footer-log"></div>
+                <h4>Links</h4>
+                <ul>
+                    <li><a class="smoothscroll" href="https://www.socialconclave.com/">Home</a></li>
+                    <li><a href="{% url 'core:overTheYears' %}">Our Team</a></li>
+                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <li><a href="{% url 'blogs:allblog' %}">Blogs</a></li>
+                    <li><a href="https://www.socialconclave.com/#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-five tab-full right footer-subscribe">
+                <h4>Have any questions?</h4>
+                <div class="cinfo-footer">
+                    <h5>POORVA CHADHA</h5>
+                    <p>
+                        <a href="tel:+918828467640">+91-8828467640</a><br>
+                        <a href="mailto:spoorvachadha.nmims@gmail.com">poorvachadha.nmims@gmail.com</a>
+                    </p>
+                </div>
+                <div class="cinfo-footer">
+                    <h5>SUNANDAN DASGUPTA</h5>
+                    <p>
+                        <a href="tel:+919820934218">+91-9820934218</a><br>
+                        <a href="mailto:sunandandasgupta.nmims@gmail.com">sunandandasgupta.nmims@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class=" row footer-bottom">
+            <div class="col-twelve">
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top">
+                        <i class="icon-arrow-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+
+    <!--Preloader-->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs
+                               " title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="preloader">
+        <div id="loader">
+            <div class="scpreloader"><img src="{% static 'images/sclogo.png' %}" style="width:200px;"></div>
+        </div>
+    </div>
+    <!--Preloader-->
+  
+    <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/9959-js-plugins.js' %}"></script>
+    <script src="{% static 'js/320-js-main.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin="anonymous"></script>
+        <script>
+            var j = 1;
+        </script>
+    <script src="{% static 'js/earth-blogs.js' %}"></script>
+  
+  
+  <script>
+    $(window).scroll(function () {
+      var sTop = $(this).scrollTop();
+      if (sTop >= 1500) {
+        $(".service-text").addClass("animmovedown");
+      }
+
+    });
+  </script>
+</body>
+
+</html>
