@@ -13,7 +13,7 @@ class Agenda(models.Model):
 
 
 class Member(models.Model):
-    firstName = models.CharField(max_length=200, blank=True)
+    firstName = models.CharField(max_length=200, blank=True, primary_key = True)
     lastName = models.CharField(max_length=200, blank=True)
     stream = models.CharField(max_length=200, blank=True)
     course = models.CharField(max_length=200, blank=True)
@@ -22,7 +22,7 @@ class Member(models.Model):
     deptName = models.CharField(max_length=200, blank=True)
     quote = models.TextField(max_length=400, blank=True)
     posnum = models.CharField(max_length=10, blank=True)
-    linkedIn = models.URLField(max_length=200, blank=True, primary_key = True)
+    linkedIn = models.URLField(max_length=200, blank=True)
     instagram = models.URLField(max_length=200, blank=True)
 
     def __str__(self):

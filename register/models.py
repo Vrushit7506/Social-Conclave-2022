@@ -19,11 +19,12 @@ class Delegate(models.Model):
         ('Female', 'Female'),
         ('Other', 'Other'),
     )
+    counter = models.IntegerField(primary_key=True, default=None)
     name = models.CharField(max_length=200, blank=True)
     gender = models.CharField(
         blank=False, choices=genderChoices, max_length=200, default=None)
     address = models.TextField(blank=True)
-    phoneNumber = models.CharField(max_length=20, blank=True, primary_key = True)
+    phoneNumber = models.CharField(max_length=10, blank=True)
     email = models.EmailField(max_length=200,  blank=True)
     topicPref1 = models.CharField(
         max_length=2000, choices=topic,  blank=False, default=None)
@@ -41,4 +42,4 @@ class Delegate(models.Model):
     registeredBy = models.CharField(max_length=1000,blank=True)
     timeRegistered = models.DateTimeField(default=timezone.now,null=True)
     def __str__(self):
-        return self.name+' from '+self.schoolName
+        return "SC" + "{:03d}".format(self.counter) + ' : ' + self.name

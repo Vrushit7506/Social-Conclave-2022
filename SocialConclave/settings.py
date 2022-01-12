@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig',
     'blogs.apps.BlogsConfig',
     'register.apps.RegisterConfig',
+    'phonenumber_field',
     'crispy_forms',
 ]
 

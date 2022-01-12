@@ -1,12 +1,18 @@
 from django import forms
 from .models import *
 from django.core import validators
+from django.contrib.auth import get_user_model
 
+Delegates = get_user_model()
 
 class DelegateForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        super(DelegateForm, self).__init__(*args, **kwargs)
+        self.fields['counter'].required = False
     class Meta:
         model = Delegate
-        fields = ['name', 'age', 'email', 'phoneNumber', 'address',
+        fields = ['counter', 'name', 'age', 'email', 'phoneNumber', 'address',
                   'gender', 'topicPref1', 'topicPref2', 'topicPref3', 'city', 'schoolName', 'courseName','yearGrad','team','registeredBy']
         labels = {
             "name": "",
@@ -26,6 +32,8 @@ class DelegateForm(forms.ModelForm):
             'registeredBy':'',
         }
         widgets = {
+            'counter': forms.HiddenInput(),
+
             'name': forms.TextInput(attrs={'placeholder': 'Name', 'required': 'required'}),
 
             'phoneNumber': forms.NumberInput(attrs={'placeholder': 'Contact Number', 'required': 'required'}),
@@ -50,3 +58,32 @@ class DelegateForm(forms.ModelForm):
             'topicPref2': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
             'topicPref3': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
         }
+        
+
+    def clean_email(self):
+        email = self.cleaned_data["email"]
+        user_count = Delegate.objects.filter(email=email).count()
+        if user_count > 0:
+            raise forms.ValidationError("This Email Has Already Been Registered.")
+        return email
+
+    def clean_phoneNumber(self):
+        phoneNumber = self.cleaned_data["phoneNumber"]
+        user_count = Delegate.objects.filter(phoneNumber=phoneNumber).count()
+        if user_count > 0:
+            raise forms.ValidationError("This Phone Number Has Already Been Registered.")
+        return phoneNumber
+
+    def save(self, commit=True):
+        # topicPref1 = self.cleaned_data["topicPref1"]
+        # topicPref2 = self.cleaned_data["topicPref2"]
+        # topicPref3 = self.cleaned_data["topicPref3"]
+        # if topicPref1 == topicPref2 or topicPref1 == topicPref3:
+        #     print("ERROR")
+        #     raise forms.ValidationError("Your Topic Preferences Are Repeated.")
+
+        i = Delegate.objects.all().order_by('-counter')[0]
+        self.counter = i.counter+1
+        self.counter = "{:03d}".format(self.counter)
+        user = super(DelegateForm, self).save(commit=False)
+        user.save()
