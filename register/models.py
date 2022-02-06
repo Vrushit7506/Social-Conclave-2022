@@ -40,6 +40,8 @@ class Delegate(models.Model):
     city = models.CharField(max_length=1000, blank=True)
     team = models.CharField(max_length=1000,blank=True)
     registeredBy = models.CharField(max_length=1000,blank=True)
+    Paid = models.BooleanField(blank=False, default=False)
+    TnC = models.BooleanField(blank=True, default=False)
     timeRegistered = models.DateTimeField(default=timezone.now,null=True)
     def __str__(self):
         return "SC" + "{:03d}".format(self.counter) + ' : ' + self.name

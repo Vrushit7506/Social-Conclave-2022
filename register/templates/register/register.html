@@ -100,16 +100,30 @@
     <div class="login">
         <div class="s-form">
             <div class='login_title'>
-                <span>Login to your account</span>
+                <span>Register For The Event</span>
             </div>
             <div class="form-content login_fields">
                 <div data-animation="scaleIn">
                     <form method="POST">
                         {% csrf_token %} {{form|crispy}}
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Event Name</th>
+                                    <th>Total Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="prioirty-200">
+                                    <td>Social Conclave 3-Day Event Pass</td>
+                                    <td><img src="{% static 'images/Register/rupee.png' %}" class="rupees" alt="">1200
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <div class="login_fields__submit">
-                            <button class="btn btn-primary" type="submit">Submit</button>
+                            <button class="btn btn-primary" type="submit">Proceed To Pay</button>
                         </div>
-
                     </form>
                 </div>
             </div>

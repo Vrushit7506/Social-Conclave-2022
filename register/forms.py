@@ -13,23 +13,24 @@ class DelegateForm(forms.ModelForm):
     class Meta:
         model = Delegate
         fields = ['counter', 'name', 'age', 'email', 'phoneNumber', 'address',
-                  'gender', 'topicPref1', 'topicPref2', 'topicPref3', 'city', 'schoolName', 'courseName','yearGrad','team','registeredBy']
+                  'gender', 'topicPref1', 'topicPref2', 'topicPref3', 'city', 'schoolName', 'courseName','yearGrad','team','registeredBy', 'TnC']
         labels = {
             "name": "",
             "age": "",
             'email': '',
             "phoneNumber": "",
-            "address": "",
+            "address": "Enter Your Address",
             'gender': 'Gender',
-            "topicPref1": "Enter First Preference",
-            "topicPref2": "Enter Second Preference",
-            "topicPref3": "Enter Third Preference",
+            "topicPref1": "Enter First Topic Preference",
+            "topicPref2": "Enter Second Topic Preference",
+            "topicPref3": "Enter Third Topic Preference",
             "city": "",
             "schoolName": "",
             "courseName": "",
             "yearGrad": "",
             'team':'',
             'registeredBy':'',
+            'TnC': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper laoreet placerat. Nullam semper auctor justo, rutrum posuere odio vulputate nec.',
         }
         widgets = {
             'counter': forms.HiddenInput(),
@@ -46,7 +47,7 @@ class DelegateForm(forms.ModelForm):
 
             'age': forms.NumberInput(attrs={'placeholder': 'Age', 'required': 'required'}),
 
-            'city': forms.TextInput(attrs={'placeholder': 'Country', 'required': 'required'}),
+            'city': forms.TextInput(attrs={'placeholder': 'City', 'required': 'required'}),
 
             'courseName': forms.TextInput(attrs={'placeholder': 'Course'}),
 
@@ -57,6 +58,7 @@ class DelegateForm(forms.ModelForm):
             'topicPref1': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
             'topicPref2': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
             'topicPref3': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
+            'TnC': forms.CheckboxInput(attrs={'placeholder': '', 'required': 'required'})
         }
         
 
@@ -69,6 +71,9 @@ class DelegateForm(forms.ModelForm):
 
     def clean_phoneNumber(self):
         phoneNumber = self.cleaned_data["phoneNumber"]
+        print(len(phoneNumber))
+        if len(phoneNumber) != 10:
+            raise forms.ValidationError("Please Enter Your Phone Number Correctly.")
         user_count = Delegate.objects.filter(phoneNumber=phoneNumber).count()
         if user_count > 0:
             raise forms.ValidationError("This Phone Number Has Already Been Registered.")
