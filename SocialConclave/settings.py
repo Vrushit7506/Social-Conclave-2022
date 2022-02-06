@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from django.core import mail
 from pathlib import Path
-import django_heroku
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'mail.socialconclave.com'
@@ -36,8 +35,6 @@ SECRET_KEY = 'ai+&okw&cv(t5aka!nj8d&(_eogg@y$v=+z7t(4s*!xw2k=aot'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'socialconclave.herokuapp.com',
-    '127.0.0.1',
     '*'
 ]
 
@@ -142,7 +139,5 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
-django_heroku.settings(locals())
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
