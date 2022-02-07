@@ -1,0 +1,243 @@
+<<<<<<< HEAD
+.vertical-bar {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  width: 100%;
+}
+.vertical-bar2 {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  width: 100%;
+}
+
+.vertical-bar2 .explain-provide {
+  width: auto !important;
+}
+
+.vertical-bar .parent-div-years {
+  margin-top: 212px;
+}
+
+.vertical-bar .parent-div-years li {
+  list-style-type: none;
+}
+
+.vertical-bar .parent-div-years li a {
+  font-family: montserrat-bold, sans-serif;
+  font-size: 3rem;
+  line-height: 1.333;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #2f89fc;
+}
+
+.vertical-bar .parent-div-years li span:nth-child(1) {
+  background-color: #2f89fc;
+  display: inline-block;
+  width: 0px;
+  height: 3px;
+  margin-bottom: 9px;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.vertical-bar .parent-div-years li span:nth-child(2) {
+  background-color: #2f89fc;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.vertical-bar .parent-div-years li:hover span:nth-child(1) {
+  width: 40px;
+}
+
+.vertical-bar .parent-div-years li.active span:nth-child(1) {
+  width: 22px;
+}
+
+.vertical-bar2 .parent-div-years {
+  margin-top: 212px;
+}
+
+.vertical-bar2 .parent-div-years li {
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+
+.vertical-bar2 .parent-div-years li a {
+  font-family: montserrat-bold, sans-serif;
+  font-size: 2.2rem;
+  line-height: 1.333;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #2f89fc;
+}
+
+.vertical-bar2 .parent-div-years li span:nth-child(1) {
+  background-color: #2f89fc;
+  display: inline-block;
+  width: 0px;
+  height: 3px;
+  margin-bottom: 9px;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.vertical-bar2 .parent-div-years li span:nth-child(2) {
+  background-color: #2f89fc;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.vertical-bar2 .parent-div-years li:hover span:nth-child(1) {
+  width: 40px;
+}
+
+.vertical-bar2 .parent-div-years li.active span:nth-child(1) {
+  width: 22px;
+}
+
+=======
+.vertical-bar{
+    display: grid;
+    grid-template-columns: 15% 85%;
+    width: 100%;
+}   
+.vertical-bar2{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 100%;
+}
+
+.vertical-bar2 .explain-provide{
+    width: auto !important;
+}
+
+.vertical-bar .parent-div-years{
+    margin-top: 212px;
+}
+
+.vertical-bar .parent-div-years li{
+    list-style-type: none;
+}
+
+.vertical-bar .parent-div-years li a{
+    font-family: montserrat-bold, sans-serif;
+    font-size: 3.0rem;
+    line-height: 1.333;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0; 
+    color: #2f89fc;
+}
+
+.vertical-bar .parent-div-years li span:nth-child(1){
+    background-color: #2f89fc;
+    display: inline-block;
+    width: 0px;
+    height: 3px;
+    margin-bottom: 9px;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+.vertical-bar .parent-div-years li span:nth-child(2){
+    background-color: #2f89fc;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.vertical-bar .parent-div-years li:hover span:nth-child(1){
+width: 40px;
+}
+
+.vertical-bar .parent-div-years li.active span:nth-child(1){
+    width: 22px;
+}
+    
+.vertical-bar2 .parent-div-years{
+    margin-top: 212px;
+}
+
+.vertical-bar2 .parent-div-years li{
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+.vertical-bar2 .parent-div-years li a{
+    font-family: montserrat-bold, sans-serif;
+    font-size: 2.2rem;
+    line-height: 1.333;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0; 
+    color: #2f89fc;
+}
+
+.vertical-bar2 .parent-div-years li span:nth-child(1){
+    background-color: #2f89fc;
+    display: inline-block;
+    width: 0px;
+    height: 3px;
+    margin-bottom: 9px;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+
+.vertical-bar2 .parent-div-years li span:nth-child(2){
+    background-color: #2f89fc;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.vertical-bar2 .parent-div-years li:hover span:nth-child(1){
+width: 40px;
+}
+
+.vertical-bar2 .parent-div-years li.active span:nth-child(1){
+    width: 22px;
+}
+
+
+>>>>>>> 517d5484edc7e4dc35128a113ff8724cced7bba7
+/* 
+
+
+
+
+/* @keyframes slideleft{
+    from{
+        transfrom: translateY(0px);
+    }
+    to{
+        transfrom: translateY(200px);
+    }
+}
+
+
+@-webkit-keyframes slideleft{
+    from{
+        transfrom: translateY(0px);
+    }
+    to{
+        transfrom: translateY(200px);
+    }
+<<<<<<< HEAD
+} */
+=======
+} */
+>>>>>>> 517d5484edc7e4dc35128a113ff8724cced7bba7

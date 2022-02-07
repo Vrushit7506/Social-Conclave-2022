@@ -42,6 +42,18 @@
       color: #000;
       text-decoration: none;
     }
+
+    body .login_title {
+      color: #319bfb;
+      height: 70px;
+      text-align: center;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+
+    body .login {
+      height: auto;
+    }
   </style>
 
 </head>
@@ -105,11 +117,13 @@
       <div class="container">
         <div class="col my-4">
 
-          <h2>Payment Status Regarding Your Order Id {{Current_user}} for </h2>
+          <h2>Payment Status For {{Current_user}} </h2>
           {% if response.RESPCODE == '01' %}
-          ORDER SUCCESS
+          <span style="color: green;">PAYMENT SUCCESS</span>
           {% else %}
-          ORDER FAILURE
+          <span style="color: red;">PAYMENT FAILURE</span>
+          <br>
+          {{response.RESPMSG}}
           {% endif%}
 
         </div>

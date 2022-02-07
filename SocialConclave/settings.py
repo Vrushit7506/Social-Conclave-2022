@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'register.apps.RegisterConfig',
     'phonenumber_field',
     'crispy_forms',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True

@@ -62,7 +62,7 @@ class DelegateForm(forms.ModelForm):
             'team': forms.TextInput(attrs={'placeholder': 'Team name: (If arriving with one, otherwise Enter "NA")', 'required': 'required'}),
             
 
-            'mumbai': forms.TextInput(attrs={'placeholder': 'Residing in Mumbai? ', 'required': 'required'}),
+            'mumbai': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
 
             'registeredBy':forms.TextInput(attrs={'placeholder':'Registered by / How did you hear about us?'}),
             

@@ -1,0 +1,93 @@
+
+.logo{
+    max-width:75%;
+    margin-left:-15px;
+}
+.smallone{
+    float:right;
+}
+.banner{
+    width:100%;
+    min-height:250px;
+}
+p {
+  font-size: 2rem;
+}
+@media only screen and (max-width: 767px) {
+    p {
+        font-size: unset;
+    }
+}
+.row{
+    margin: 0 auto 80px auto !important;
+}
+
+
+b {
+  font-family: "Segoe UI Light", "Segoe", "Segoe UI", "Helvetica Neue",
+    sans-serif;
+  font-weight: 900;
+}
+
+
+.col-md-1{
+    padding-top:2%;
+}
+.sideimg{
+    width:100%;
+    max-width:75px;
+}
+.sidetext{
+    font-size:200%;
+}
+.col-md-11{
+    padding-top:2%;
+}
+.blogheading{
+    font-size:5em;
+    font-family:'Segoe UI Light','Segoe','Segoe UI','Helvetica Neue',sans-serif;
+}
+.div1 .div1para{
+    padding-top:1%;
+}
+.div1 .div1img{
+    width:100%;
+}
+.div3 .div3quote{
+    padding:0% 10%;
+    font-size:4em;
+    font-family:'Segoe UI Light','Segoe','Segoe UI','Helvetica Neue',sans-serif;
+    text-align:center;
+}
+.div4 .row .col-md-6 .div4leftimg{
+    width:100%;
+}
+.footercontainer{
+    padding-bottom:10rem;
+    background:rgba(0,0,0,0.7);
+    font-family: 'Montserrat', sans-serif;
+}
+
+#leftsectionfooter{
+    padding-top:9rem;
+    font-size:15px;
+    line-height:2;
+    color:rgba(255, 255, 255, 0.5);
+    padding-left:8rem;
+}
+.leftfooterimg{
+    height:28px;
+    width:85px;
+}
+#rightsectionfooter{
+    padding-top:10rem;
+    font-size:15px;
+    line-height:2;
+    color:rgba(255, 255, 255, 0.5);
+    padding-left:8rem;
+}
+#rightsectionfooterh4{
+    color:white;
+    font-size:1.6rem;
+    line-height:1.313;
+}

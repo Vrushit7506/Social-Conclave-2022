@@ -9,6 +9,13 @@ from django.template.loader import get_template
 from django.views.generic import TemplateView
 from django.views.decorators.csrf import csrf_exempt
 
+from django.http import HttpResponse
+from tablib import Dataset
+
+from .resources import DelegateResource
+from .models import Delegate
+
+
 import json
 import requests
 # import checksum generation utility
@@ -105,15 +112,16 @@ def handlerequest(request):
     verify = Checksum.verify_checksum(response_dict, Paytm_Key, checksum)
     counter_id = response_dict['ORDERID'][2:]
     Current_user = Delegate.objects.get(counter=counter_id)
+    Current_user_copy = 'SC' + "{:03d}".format(Current_user.counter) + ' : ' + Current_user.name
     if verify:
         if response_dict['RESPCODE'] == '01':
             print('order successful')
+            Current_user.Paid = 'True'
+            Current_user.save()
         else:
-            print('order was not successful because' + response_dict['RESPMSG'])
-    return render(request, 'register/paymentstatus.html', {'response': response_dict, 'Current_user': Current_user})
-
-
-
+            print('order was not successful because ' + response_dict['RESPMSG'])
+            Current_user.delete()
+    return render(request, 'register/paymentstatus.html', {'response': response_dict, 'Current_user': Current_user_copy})
 
 
 
