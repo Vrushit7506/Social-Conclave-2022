@@ -8,5 +8,6 @@ urlpatterns = [
   # path('', views.home, name='registration'),
   path('', views.Renderform, name="form-view"),
   path('success/', views.success, name="success-page"),
-  path('handlerequest/', views.handlerequest, name="handlerequest"),
+  # path('handlepayment/', views.handlepayment, name="handlepayment"),
+  path("handlerequest/", views.handlerequest, name="HandleRequest"),
 ]

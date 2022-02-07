@@ -38,21 +38,19 @@ def Renderform(request):
             form.save()
 
 
-            paytmParams = dict()
+            param_dict = dict()
 
-            paytmParams = {
-                "requestType"   : "Payment",
-                "mid"           : Paytm_id,
-                "websiteName"   : "WEBSTAGING",
-                "orderId"       : order_id,
-                "callbackUrl"   : "http://127.0.0.1:8000/register/handlerequest/",
-                "txnAmount"     : {
-                    "value"     : "1.00",
-                    "currency"  : "INR",
-                },
-                "userInfo"      : {
-                    "custId"    : request.POST['counter'],
-                },
+            param_dict={
+
+                    'MID': Paytm_id,
+                    'ORDER_ID': order_id,
+                    'TXN_AMOUNT': '1.00',
+                    'CUST_ID': request.POST['counter'],
+                    'INDUSTRY_TYPE_ID': 'Retail',
+                    'WEBSITE': 'DEFAULT',
+                    'CHANNEL_ID': 'WEB',
+                    'CALLBACK_URL':'http://127.0.0.1:8000/register/handlerequest/',
+
             }
 
             # # Generate checksum by parameters we have in body
@@ -77,8 +75,13 @@ def Renderform(request):
             #     'mid' : Paytm_id,
             #     'orderId' : order_id,
             # }
-            paytmParams['CHECKSUMHASH'] = Checksum.generate_checksum(paytmParams, Paytm_Key)
-            return render(request, 'register/PaymentRedirect.html', {'data': paytmParams})
+            
+            param_dict['CHECKSUMHASH'] = Checksum.generate_checksum(param_dict, Paytm_Key)
+
+
+            return render(request, 'register/paytm.html', {'param_dict': param_dict})
+
+            return render(request, 'register/checkout.html')
 
 
             # return HttpResponseRedirect('../main/index.html')
@@ -87,7 +90,6 @@ def Renderform(request):
     args['form'] = form
 
     return render(request,'register/register.html', args)
-
 
 
 @csrf_exempt
@@ -101,17 +103,14 @@ def handlerequest(request):
             checksum = form[i]
 
     verify = Checksum.verify_checksum(response_dict, Paytm_Key, checksum)
+    counter_id = response_dict['ORDERID'][2:]
+    Current_user = Delegate.objects.get(counter=counter_id)
     if verify:
         if response_dict['RESPCODE'] == '01':
             print('order successful')
         else:
             print('order was not successful because' + response_dict['RESPMSG'])
-    return render(request, 'register/success.html', {'response': response_dict})
-
-
-
-
-
+    return render(request, 'register/paymentstatus.html', {'response': response_dict, 'Current_user': Current_user})
 
 
 

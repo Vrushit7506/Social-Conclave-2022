@@ -12,52 +12,61 @@ class DelegateForm(forms.ModelForm):
         self.fields['counter'].required = False
     class Meta:
         model = Delegate
-        fields = ['counter', 'name', 'age', 'email', 'phoneNumber', 'address',
-                  'gender', 'topicPref1', 'topicPref2', 'topicPref3', 'city', 'schoolName', 'courseName','yearGrad','team','registeredBy', 'TnC']
+        fields = ['counter', 'name', 'phoneNumber', 'altphoneNumber', 'email', 'dob',
+                  'gender', 'schoolName', 'topicPref1', 'topicPref2', 'topicPref3', 'pastexp', 'teamyn','team','mumbai','registeredBy', 'TnC']
         labels = {
             "name": "",
-            "age": "",
-            'email': '',
-            "phoneNumber": "",
-            "address": "Enter Your Address",
+            'phoneNumber': '',
+            "altphoneNumber": "",
+            "email": "",
+            "dob": "",
             'gender': 'Gender',
+            "schoolName": "",
             "topicPref1": "Enter First Topic Preference",
             "topicPref2": "Enter Second Topic Preference",
             "topicPref3": "Enter Third Topic Preference",
-            "city": "",
-            "schoolName": "",
-            "courseName": "",
-            "yearGrad": "",
-            'team':'',
+            "pastexp": "",
+            "teamyn": "Team? ",
+            "team": "",
+            "mumbai": "Residing in Mumbai? ",
             'registeredBy':'',
             'TnC': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper laoreet placerat. Nullam semper auctor justo, rutrum posuere odio vulputate nec.',
         }
         widgets = {
             'counter': forms.HiddenInput(),
 
-            'name': forms.TextInput(attrs={'placeholder': 'Name', 'required': 'required'}),
+            'name': forms.TextInput(attrs={'placeholder': 'Full Name', 'required': 'required'}),
 
-            'phoneNumber': forms.NumberInput(attrs={'placeholder': 'Contact Number', 'required': 'required'}),
+            'phoneNumber': forms.NumberInput(attrs={'placeholder': 'Mobile Number', 'required': 'required'}),
 
-            'schoolName': forms.TextInput(attrs={'placeholder': 'College Name', 'required': 'required'}),
+            'altphoneNumber': forms.NumberInput(attrs={'placeholder': 'Alternate Mobile Number', 'required': 'required'}),
 
-            'address': forms.Textarea(attrs={'placeholder': 'Address: (Please include nearest landmark and pincode)', 'required': 'required', 'class': 'form-control'}),
+            'email': forms.EmailInput(attrs={'placeholder': 'Email Address', 'required': 'required'}),
 
-            'email': forms.EmailInput(attrs={'placeholder': 'Email', 'required': 'required'}),
+            'dob': forms.TextInput(attrs={'placeholder': 'Date of Birth (DD-MM-YYYY)', 'required': 'required'}),
 
-            'age': forms.NumberInput(attrs={'placeholder': 'Age', 'required': 'required'}),
-
-            'city': forms.TextInput(attrs={'placeholder': 'City', 'required': 'required'}),
-
-            'courseName': forms.TextInput(attrs={'placeholder': 'Course'}),
-
-            'yearGrad': forms.NumberInput(attrs={'placeholder': 'Year Of Graduation', 'required': 'required'}),
-            'registeredBy':forms.TextInput(attrs={'placeholder':'Registered By: '}),
             'gender': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
-            'team': forms.TextInput(attrs={'placeholder': 'Team name: (If arriving with one)', 'required': 'required'}),
+
+            'schoolName': forms.TextInput(attrs={'placeholder': 'College Name / School Name / Company Name', 'required': 'required'}),
+
+            # 'address': forms.Textarea(attrs={'placeholder': 'Address: (Please include nearest landmark and pincode)', 'required': 'required', 'class': 'form-control'}),
+
             'topicPref1': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
             'topicPref2': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
             'topicPref3': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
+
+            'pastexp': forms.TextInput(attrs={'placeholder': 'Course'}),
+
+            'teamyn': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
+
+            'team': forms.TextInput(attrs={'placeholder': 'Team name: (If arriving with one, otherwise Enter "NA")', 'required': 'required'}),
+            
+
+            'mumbai': forms.TextInput(attrs={'placeholder': 'Residing in Mumbai? ', 'required': 'required'}),
+
+            'registeredBy':forms.TextInput(attrs={'placeholder':'Registered by / How did you hear about us?'}),
+            
+            
             'TnC': forms.CheckboxInput(attrs={'placeholder': '', 'required': 'required'})
         }
         
