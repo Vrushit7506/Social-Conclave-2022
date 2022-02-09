@@ -29,7 +29,7 @@
 
     <link rel="stylesheet" href="{% static 'css/register.css' %}">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
@@ -100,11 +100,12 @@
     <div class="login">
         <div class="s-form">
             <div class='login_title'>
-                <span>Register For The Event</span>
+                <img src="{% static 'images/register-banner.png' %}" alt="">
+                <span>Event Dates: 11th, 12th, and 13th March, 2022</span>
             </div>
             <div class="form-content login_fields">
                 <div data-animation="scaleIn">
-                    <form method="POST">
+                    <form method="POST" style="margin-bottom: 0rem;">
                         {% csrf_token %} {{form|crispy}}
                         <table>
                             <thead>
@@ -132,7 +133,7 @@
     <!-- /FORM -->
 
     <!-- Footer -->
-    <!-- <footer>
+    <footer style="margin-top: 16rem;">
         <div class="row footer-main">
             <div class="col-four tab-full left footer-subscribe">
                 <h4>Let's talk about</h4>
@@ -194,7 +195,7 @@
                 </div>
             </div>
         </div>
-    </footer> -->
+    </footer>
     <!-- /Footer -->
 
 
@@ -250,7 +251,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"
         integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin=" anonymous"></script>
     <script src="{% static 'js/earth.js' %}"></script>
-    <!-- <script src="{% static 'js/register.js' %}"></script> -->
+    <script src="{% static 'js/register.js' %}"></script>
 
 
     <script>

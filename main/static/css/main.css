@@ -2175,11 +2175,11 @@ html.no-csstransitions .home-content__main {
 .s-about {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
-    background-color: #2f89fc;
-    background: url(/static/images/bluetxt-bg.jpg);
+    /* background: url(/static/images/bluetxt-bg.jpg); */
     background-size: cover;
     color: #010507;
     position: relative;
+    background: linear-gradient(135deg, #006ac9 0%, #0086ff 30%, #77bd40 100%);
 }
 
 .s-about .section-header.has-bottom-sep::before {
