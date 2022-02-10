@@ -88,14 +88,13 @@ def Renderform(request):
 
             return render(request, 'register/paytm.html', {'param_dict': param_dict})
 
-            return render(request, 'register/checkout.html')
-
+            # return render(request, 'register/checkout.html')
 
             # return HttpResponseRedirect('../main/index.html')
     else:
         form = DelegateForm()
-    args['form'] = form
 
+    args['form'] = form
     return render(request,'register/register.html', args)
 
 

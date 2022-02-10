@@ -59,7 +59,7 @@ class DelegateForm(forms.ModelForm):
 
             'teamyn': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
 
-            'team': forms.TextInput(attrs={'placeholder': 'Team name: (If arriving with one, otherwise Enter "NA")', 'required': 'required'}),
+            'team': forms.TextInput(attrs={'placeholder': 'Team name: (If arriving with one, otherwise Enter "NA")'}),
             
 
             'mumbai': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
@@ -69,7 +69,6 @@ class DelegateForm(forms.ModelForm):
             
             'TnC': forms.CheckboxInput(attrs={'placeholder': '', 'required': 'required'})
         }
-        
 
     def clean_email(self):
         email = self.cleaned_data["email"]
