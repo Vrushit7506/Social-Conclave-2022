@@ -41,7 +41,7 @@ def Renderform(request):
             i = Delegate.objects.all().order_by('-counter')[0]
             request.POST['counter'] = i.counter+1
             request.POST['counter'] = "{:03d}".format(request.POST['counter'])
-            order_id = "OD" + request.POST['counter']
+            order_id = "ID" + request.POST['counter']
             form.save()
 
 
@@ -51,7 +51,7 @@ def Renderform(request):
 
                     'MID': Paytm_id,
                     'ORDER_ID': order_id,
-                    'TXN_AMOUNT': '1.00',
+                    'TXN_AMOUNT': '10.00',
                     'CUST_ID': request.POST['counter'],
                     'INDUSTRY_TYPE_ID': 'Retail',
                     'WEBSITE': 'DEFAULT',
@@ -112,6 +112,7 @@ def handlerequest(request):
     counter_id = response_dict['ORDERID'][2:]
     Current_user = Delegate.objects.get(counter=counter_id)
     Current_user_copy = 'SC' + "{:03d}".format(Current_user.counter) + ' : ' + Current_user.name
+    print(response_dict)
     if verify:
         if response_dict['RESPCODE'] == '01':
             print('order successful')

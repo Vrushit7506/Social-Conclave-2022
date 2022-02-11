@@ -13,18 +13,21 @@
     <link rel="preload" href="{% static 'images/sclogo.png' %}" as="image">
     <link rel="preload" href="{% static 'images/earthRing.png' %}" as="image">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
-    
+    <link rel="stylesheet" href="{% static 'css/blogs.css' %}">
+
     <style>
         .slick-track {
             margin: 0 auto;
         }
     </style>
-    
+
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script src="{% static 'js/pace.min.js' %}"></script>
 
@@ -34,13 +37,14 @@
 
     <style>
         .services-list .service-text {
-                height: unset !important;
-            }          
+            height: unset !important;
+        }
 
         @media only screen and (max-width: 767px) {
             .services-list .service-text {
                 height: unset !important;
             }
+
             .clients__slide {
                 padding: 1rem !important;
             }
@@ -107,27 +111,34 @@
             <a class="smoothscroll" href="#blog" title="blogs" onclick="myFunction();">Blogs</a>
             <a class="smoothscroll" href="#clients" title="clients" onclick="myFunction();">Affiliations</a>
             <!-- <a href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our Team</a> -->
-            <a class="smoothscroll" href="{% url 'register:form-view' %}" title="register" onclick="myFunction();">Register</a>
+            <a class="smoothscroll" href="{% url 'register:form-view' %}" title="register"
+                onclick="myFunction();">Register</a>
             <a class="smoothscroll" href="#contact" title="contact" onclick="myFunction();">Contact</a>
         </div>
     </div>
     <!-- /Mobile Menu -->
 
     <!-- Slide1: Home -->
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000" data-position-y="center">
+    <section id="home" class="s-home target-section" data-parallax="scroll"
+        data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
+        data-position-y="center">
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
         <div class="home-content">
             <div class="row home-content__main">
                 <h3>Welcome to Social Conclave</h3>
                 <h1 style="margin-bottom:0px;">
-                    We strive to spread smiles <br> and impact lives,</h1>
+                    Together let us <br>BE THE CHANGE
+                </h1>
                 <h1 style='margin-top:0px;'>
                     ONE PROBLEM AT A TIME. <br>
                 </h1>
                 <div class="home-content__buttons">
                     <a href="{% url 'register:form-view' %}" class="btn btn--stroke">
                         Register
+                    </a>
+                    <a href="{% url 'core:agendas' %}" class="btn btn--stroke">
+                        Agendas
                     </a>
                 </div>
             </div>
@@ -166,11 +177,23 @@
                 <h3 class="subhead subhead--dark" style="color: #222;">Hello There</h3>
                 <h1 class="display-1 display-1--light">This is about us</h1>
                 <p style="font-size: 2rem;color: #fff;">
-                    Social Conclave is a one of its kind national conference wherein the delegates from across the nation will gather to discuss about the various social and economic concerns plaguing our country. The main aim of the conference is to find feasible solutions for the problems which are implemented by Team Social Impact.
+                    Social Conclave is a one of its kind national conference wherein the delegates from across the
+                    nation will gather to discuss about the various social and economic concerns plaguing our country.
+                    The main aim of the conference is to find feasible solutions for the problems which are implemented
+                    by Team Social Impact.
                 </p>
                 <p style="font-size: 2rem;color: #fff;">
-                    Multiple panel discussions will be held to provide the delegates with a helping hand in gaining insight into the agendas. The main objective of Social Conclave is to initiate a dialogue amongst the delegates, with the hope of changing the face of India for the better. We will also be organising a field visit for the delegates to help them get to the crux of the situation. We hope that the conference will see the birth of India’s next generation of change-makers.
+                    Multiple panel discussions will be held to provide the delegates with a helping hand in gaining
+                    insight into the agendas. The main objective of Social Conclave is to initiate a dialogue amongst
+                    the delegates, with the hope of changing the face of India for the better. We will also be
+                    organising a field visit for the delegates to help them get to the crux of the situation. We hope
+                    that the conference will see the birth of India’s next generation of change-makers.
                 </p>
+            </div>
+            <div class="home-content__buttons" style="text-align: center;">
+                <a href="{% url 'core:overTheYears' %}" class="btn btn--stroke">
+                    Meet Our Team
+                </a>
             </div>
         </div>
         <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
@@ -203,25 +226,32 @@
                 <h1 class="display-2">The Conclave Blog</h1>
             </div>
         </div>
-        <div class="row services-list block-1-2 block-tab-full" id="remblock">
+        <div class="row services-list block-1-2 block-tab-full containerblogs" id="remblock">
 
             {% for allblog in allblogs %}
 
-            <div class="col-block service-item mobheight" data-aos="fade-up">
-                <div class="service-icon">
-                    <img src="{% static 'images/' %}{{allblog.introimage}}">
+            <div class="col-block card" data-aos="fade-up">
+                <div class="card__header">
+                    <img src="{% static 'images/' %}{{allblog.introimage}}" class="card__image" width="600">
                 </div>
-                <div class="service-text">
-                    <h3 class="h2">{{allblog.shortTitle}}</h3>
+                <div class="card__body">
+                    <h4>{{allblog.shortTitle}}</h4>
                     <p>{{allblog.introPara}}
-                    
-                    <a href="blogs/{{allblog.slug}}" target="_blank">... Read More</a>
                     </p>
+                    <div class="card__footer">
+                        <a href="blogs/{{allblog.slug}}" target="_blank">Read Article</a>
+                    </div>
                 </div>
             </div>
 
             {% endfor %}
 
+        </div>
+
+        <div class="home-content__buttons dark" style="text-align: center;">
+            <a href="{% url 'blogs:allblog' %}" class="btn btn--stroke">
+                View All Blogs
+            </a>
         </div>
     </section>
     <!-- /Slide3: Blog -->
@@ -241,7 +271,8 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/memory-lane/img1.jpg' %}" class="thumb-link" title="Shutterbug" data-size="600x800">
+                                <a href="{% static 'images/memory-lane/img1.jpg' %}" class="thumb-link"
+                                    title="Shutterbug" data-size="600x800">
                                     <img src="{% static 'images/memory-lane/img1.jpg' %}" alt="">
                                 </a>
                             </div>
@@ -250,7 +281,8 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/memory-lane/img2.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                <a href="{% static 'images/memory-lane/img2.jpg' %}" class="thumb-link"
+                                    title="Shutterbug" data-size="1050x700">
                                     <img src="{% static 'images/memory-lane/img2.jpg' %}" alt="">
                                 </a>
                             </div>
@@ -259,7 +291,8 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/memory-lane/img3.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                <a href="{% static 'images/memory-lane/img3.jpg' %}" class="thumb-link"
+                                    title="Shutterbug" data-size="1050x700">
                                     <img src="{% static 'images/memory-lane/img3.jpg' %}" alt="">
                                 </a>
                             </div>
@@ -268,7 +301,8 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/memory-lane/img4.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                <a href="{% static 'images/memory-lane/img4.jpg' %}" class="thumb-link"
+                                    title="Shutterbug" data-size="1050x700">
                                     <img src="{% static 'images/memory-lane/img4.jpg' %}" alt="">
                                 </a>
                             </div>
@@ -277,7 +311,8 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/memory-lane/img5.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                <a href="{% static 'images/memory-lane/img5.jpg' %}" class="thumb-link"
+                                    title="Shutterbug" data-size="1050x700">
                                     <img src="{% static 'images/memory-lane/img5.jpg' %}" alt="">
                                 </a>
                             </div>
@@ -286,7 +321,8 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/memory-lane/img6.jpg' %}" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                                <a href="{% static 'images/memory-lane/img6.jpg' %}" class="thumb-link"
+                                    title="Shutterbug" data-size="1050x700">
                                     <img src="{% static 'images/memory-lane/img6.jpg' %}" alt="">
                                 </a>
                             </div>
@@ -295,7 +331,8 @@
                     <div class="masonry__brick" data-aos="fade-up">
                         <div class="item-folio">
                             <div class="item-folio__thumb">
-                                <a href="{% static 'images/memory-lane/img7.jpg' %}" class="thumb-link" title="Social Conclave 19" data-size="1050x700">
+                                <a href="{% static 'images/memory-lane/img7.jpg' %}" class="thumb-link"
+                                    title="Social Conclave 19" data-size="1050x700">
                                     <img src="{% static 'images/memory-lane/img7.jpg' %}" alt="">
                                 </a>
                             </div>
@@ -310,68 +347,98 @@
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead">Affiliations</h3>
-                <h1 class="display-2">At Social Conclave, we are proud to be associated with these esteemed United Nations bodies.</h1>
+                <h1 class="display-2">At Social Conclave, we are proud to be associated with these esteemed United
+                    Nations bodies.</h1>
             </div>
         </div>
         <div class="row clients-outer" data-aos="fade-up">
             <div class="col-full">
                 <div class="clients">
-                    <a href="#0" title="UNDP" class="clients__slide"><img src="{% static 'images/affiliations/undp.png' %}"></a>
-                    <a href="#0" title="UN WOMEN" class="clients__slide"><img src="{% static 'images/affiliations/unwomen.png' %}"></a>
-                    <a href="#0" title="UNICEF" class="clients__slide"><img src="{% static 'images/affiliations/unicef.png' %}"></a>
+                    <a href="" title="UN" class="clients__slide"><img
+                            src="{% static 'images/affiliations/UN 2.png' %}"></a>
+                    <a href="" title="UN Peace" class="clients__slide"><img
+                            src="{% static 'images/affiliations/UPEACE 2.png' %}"></a>
                 </div>
             </div>
         </div>
-        
+
         <!-- Sponsors -->
-        <div class="row section-header" data-aos="fade-up">
+        <!-- <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead">Sponsors</h3>
-                <!-- <h1 class="display-2">At Social Conclave, we are proud to be associated with these esteemed United Nations bodies.</h1> -->
             </div>
         </div>
         <div class="row clients-outer sponsors-outer" data-aos="fade-up">
             <div class="col-full">
                 <div class="clients sponsors">
-                    <a href="#0" title="Xiaomi" class="clients__slide sponsor"><img src="{% static 'images/sponsors/xiaomi.webp' %}"></a>
-                    <a href="#0" title="Angel Broking" class="clients__slide sponsor"><img src="{% static 'images/sponsors/angel.webp' %}"></a>
-                    <a href="#0" title="Beany Boy - Coffee Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/beanyboy.webp' %}"></a>
-                    <a href="#0" title="Chocodate - Chocolate Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/chocolate.webp' %}"></a>
-                    <a href="#0" title="Manive - Health and Beauty Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/manive.webp' %}"></a>
-                    <a href="#0" title="Language Fluent - Teaching Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/language.webp' %}"></a>
-                    <a href="#0" title="LIC" class="clients__slide sponsor"><img src="{% static 'images/sponsors/lic.webp' %}"></a>
-                    <a href="#0" title="EVOCUS - HydrationPartner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/evocus.webp' %}"></a>
-                    <a href="#0" title="BridgeLabz - Employability Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/bridgelabz.webp' %}"></a>
-                    <a href="#0" title="Chaayos - Tea Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/chaayos.webp' %}"></a>
-                    <a href="#0" title="Easy Shiksha - Online Courses Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/easyshiksha.webp' %}"></a>
-                    <a href="#0" title="The Ecolution - Sustainability Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/ecolution.webp' %}"></a>
-                    <a href="#0" title="Flavours of Home - Snacks Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/flavours.webp' %}"></a>
-                    <a href="#0" title="Health Treat - Healthy Snacks Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/health.webp' %}"></a>
-                    <a href="#0" title="HealWithAsha - Well Being Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/healwasha.webp' %}"></a>
-                    <a href="#0" title="KARAM - COVID Protection Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/karam.webp' %}"></a>
-                    <a href="#0" title="Kash Beauty Lounge - Lounge Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/kash.webp' %}"></a>
-                    <a href="#0" title="King Doodle - Clothing Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/kingdoodle.webp' %}"></a>
-                    <a href="#0" title="NewBerry - Investment Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/newberry.webp' %}"></a>
-                    <a href="#0" title="Postbox India - Media Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/postbox.webp' %}"></a>
-                    <a href="#0" title="SiniteCo - Media Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/siniteco.webp' %}"></a>
-                    <a href="#0" title="SS Home Decor - Home Decor Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/sshome.webp' %}"></a>
-                    <a href="#0" title="Stack’d Burgers - Food Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/stackd.webp' %}"></a>
-                    <a href="#0" title="TRIBESTAY - Student Housing Partner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/tribestay.webp' %}"></a>
-                    <a href="#0" title="YouthInc - YouthMediaPartner" class="clients__slide sponsor"><img src="{% static 'images/sponsors/youthinc.webp' %}"></a>
+                    <a href="#0" title="Xiaomi" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/xiaomi.webp' %}"></a>
+                    <a href="#0" title="Angel Broking" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/angel.webp' %}"></a>
+                    <a href="#0" title="Beany Boy - Coffee Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/beanyboy.webp' %}"></a>
+                    <a href="#0" title="Chocodate - Chocolate Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/chocolate.webp' %}"></a>
+                    <a href="#0" title="Manive - Health and Beauty Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/manive.webp' %}"></a>
+                    <a href="#0" title="Language Fluent - Teaching Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/language.webp' %}"></a>
+                    <a href="#0" title="LIC" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/lic.webp' %}"></a>
+                    <a href="#0" title="EVOCUS - HydrationPartner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/evocus.webp' %}"></a>
+                    <a href="#0" title="BridgeLabz - Employability Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/bridgelabz.webp' %}"></a>
+                    <a href="#0" title="Chaayos - Tea Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/chaayos.webp' %}"></a>
+                    <a href="#0" title="Easy Shiksha - Online Courses Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/easyshiksha.webp' %}"></a>
+                    <a href="#0" title="The Ecolution - Sustainability Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/ecolution.webp' %}"></a>
+                    <a href="#0" title="Flavours of Home - Snacks Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/flavours.webp' %}"></a>
+                    <a href="#0" title="Health Treat - Healthy Snacks Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/health.webp' %}"></a>
+                    <a href="#0" title="HealWithAsha - Well Being Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/healwasha.webp' %}"></a>
+                    <a href="#0" title="KARAM - COVID Protection Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/karam.webp' %}"></a>
+                    <a href="#0" title="Kash Beauty Lounge - Lounge Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/kash.webp' %}"></a>
+                    <a href="#0" title="King Doodle - Clothing Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/kingdoodle.webp' %}"></a>
+                    <a href="#0" title="NewBerry - Investment Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/newberry.webp' %}"></a>
+                    <a href="#0" title="Postbox India - Media Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/postbox.webp' %}"></a>
+                    <a href="#0" title="SiniteCo - Media Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/siniteco.webp' %}"></a>
+                    <a href="#0" title="SS Home Decor - Home Decor Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/sshome.webp' %}"></a>
+                    <a href="#0" title="Stack’d Burgers - Food Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/stackd.webp' %}"></a>
+                    <a href="#0" title="TRIBESTAY - Student Housing Partner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/tribestay.webp' %}"></a>
+                    <a href="#0" title="YouthInc - YouthMediaPartner" class="clients__slide sponsor"><img
+                            src="{% static 'images/sponsors/youthinc.webp' %}"></a>
                 </div>
             </div>
-        </div>
-        <!-- Sponsors -->
-        
+        </div> -->
+
         <div class="row clients-testimonials" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead testi">Testimonials</h3>
                 <div class="testimonials">
                     <div class="testimonials__slide">
                         <p>
-                            I have been participating in various MUNs and summits since my school days,But Social conclave was something much different and diverse from all those competitions. The whole event was properly managed and hosted. And the informals were just awesome.
-                            Something Unique abut the conclave was that it takes the best solutions and try to implement it. The competition is an amalgamation of various aspects such as report writing, group discussions, presentation and solution making
-                            along with an actual field visit to places with which the committee is planing to deal with, which actually helps you to know the ground reality of the topic.
+                            I have been participating in various MUNs and summits since my school days,But Social
+                            conclave was something much different and diverse from all those competitions. The whole
+                            event was properly managed and hosted. And the informals were just awesome.
+                            Something Unique abut the conclave was that it takes the best solutions and try to implement
+                            it. The competition is an amalgamation of various aspects such as report writing, group
+                            discussions, presentation and solution making
+                            along with an actual field visit to places with which the committee is planing to deal with,
+                            which actually helps you to know the ground reality of the topic.
                         </p>
                         <div class="testimonials__info">
                             <span class="testimonials__name">Gandharva Shelar</span>
@@ -379,9 +446,14 @@
                     </div>
                     <div class="testimonials__slide">
                         <p>
-                            Social Conclave was my very first summit that I attended. I was very nervous and didn't know anything about the concept of a summit. On day one we witnessed many intellectual discussions about various topics. On the second day we were taken on a field
-                            visit to our respective area of concern. On the third day we had to submit our final presentation on the the topic that we were working on. When our group had finished the day's proceedings and were sitting in the closing ceremony
-                            I realised that I was nervous earlier for no reason. Social Conclave was a experience that I could never forget in the entirety of my life.
+                            Social Conclave was my very first summit that I attended. I was very nervous and didn't know
+                            anything about the concept of a summit. On day one we witnessed many intellectual
+                            discussions about various topics. On the second day we were taken on a field
+                            visit to our respective area of concern. On the third day we had to submit our final
+                            presentation on the the topic that we were working on. When our group had finished the day's
+                            proceedings and were sitting in the closing ceremony
+                            I realised that I was nervous earlier for no reason. Social Conclave was a experience that I
+                            could never forget in the entirety of my life.
                         </p>
                         <div class="testimonials__info">
                             <span class="testimonials__name">Rithvik Shivaprakash</span>
@@ -389,10 +461,18 @@
                     </div>
                     <div class="testimonials__slide">
                         <p>
-                            Being a team of freshers last year, taking part in the Social Conclave hosted by the Social Impact was a great end to our first year. Not only the interactive session with experts in fields like Substance Abuse, Urban Sanitation etc. which deals with
-                            the problems occuring currently in the society and it also create awareness amongst the students which helped us to gain important knowledge about social issues. The 3 day event was a learning curve in every way with activities
-                            like the Panchayat where we discussed the pros and cons of the social issues, the report making session where we documented our research and the presentation where we presented the solutions about overcoming the issue from
-                            its root. Social Conclave is a one of a kind event and we are glad to have been a part. So in conclusion, the event was not just about familiarising ourselves with the issues but mainly about how to act on the issues and find
+                            Being a team of freshers last year, taking part in the Social Conclave hosted by the Social
+                            Impact was a great end to our first year. Not only the interactive session with experts in
+                            fields like Substance Abuse, Urban Sanitation etc. which deals with
+                            the problems occuring currently in the society and it also create awareness amongst the
+                            students which helped us to gain important knowledge about social issues. The 3 day event
+                            was a learning curve in every way with activities
+                            like the Panchayat where we discussed the pros and cons of the social issues, the report
+                            making session where we documented our research and the presentation where we presented the
+                            solutions about overcoming the issue from
+                            its root. Social Conclave is a one of a kind event and we are glad to have been a part. So
+                            in conclusion, the event was not just about familiarising ourselves with the issues but
+                            mainly about how to act on the issues and find
                             solutions. Looking forward to Social Conclave 2020.
                         </p>
                         <div class="testimonials__info">
@@ -418,16 +498,20 @@
                 <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
                     <fieldset>
                         <div class="form-field">
-                            <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                            <input name="contactName" type="text" id="contactName" placeholder="Your Name" value=""
+                                minlength="2" required="" aria-required="true" class="full-width">
                         </div>
                         <div class="form-field">
-                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required="" aria-required="true" class="full-width">
+                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value=""
+                                required="" aria-required="true" class="full-width">
                         </div>
                         <div class="form-field">
-                            <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                            <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value=""
+                                class="full-width">
                         </div>
                         <div class="form-field">
-                            <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                            <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10"
+                                cols="50" required="" aria-required="true" class="full-width"></textarea>
                         </div>
                         <div class="form-field">
                             <button class="full-width btn--primary">Submit</button>
@@ -461,7 +545,8 @@
                     <div class="cinfo">
                         <h5>SUNANDAN DASGUPTA</h5>
                         <p>
-                            <a href="tel:+919820934218" style="color: rgba(255, 255, 255, 0.4);">+91-9820934218</a><br>sunandandasgupta.nmims@gmail.com
+                            <a href="tel:+919820934218"
+                                style="color: rgba(255, 255, 255, 0.4);">+91-9820934218</a><br>sunandandasgupta.nmims@gmail.com
                         </p>
                     </div>
                     <ul class="contact-social">
@@ -566,8 +651,11 @@
             </div>
             <div class="pswp__ui pswp__ui--hidden">
                 <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs
-                               " title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close"
+                        title="Close (Esc)"></button> <button class="pswp__button pswp__button--share"
+                        title="Share"></button> <button class="pswp__button pswp__button--fs
+                               " title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom"
+                        title="Zoom in/out"></button>
                     <div class="pswp__preloader">
                         <div class="pswp__preloader__icn">
                             <div class="pswp__preloader__cut">
@@ -602,11 +690,12 @@
 
     <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin=" anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"
+        integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin=" anonymous"></script>
     <script src="{% static 'js/earth.js' %}"></script>
-    
+
     <script>
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             var sTop = $(this).scrollTop();
             if (sTop >= 1500) {
                 $(".service-text").addClass("animmovedown");
@@ -621,9 +710,9 @@
 
             form.addEventListener('submit', e => {
                 fetch(scriptURL, {
-                        method: 'POST',
-                        body: new FormData(form)
-                    })
+                    method: 'POST',
+                    body: new FormData(form)
+                })
                     .then(response => console.log('Success!', response))
                     .catch(error => console.error('Error!', error.message))
             });

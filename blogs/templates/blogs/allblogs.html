@@ -4,58 +4,63 @@
 <html class="no-js" lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Blogs | Social Conclave</title>
-  <meta name="description" content="">
-  <meta name="author" content="">r
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Blogs | Social Conclave</title>
+    <meta name="description" content="">
+    <meta name="author" content="">r
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-    crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
 
     <link rel="preload" href="{% static 'images/sclogo.png' %}" as="image">
     <link rel="preload" href="{% static 'images/earthRing.png' %}" as="image">
-    
-  <link rel="stylesheet" href="{% static 'css/base.css' %}">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
-  <link rel="stylesheet" href="{% static 'css/main.css' %}">
-  <link rel="stylesheet" href="{% static 'css/nav.css' %}">
-  <link rel="stylesheet" href="{% static 'css/blogscss.css' %}">
 
-  <script src="{% static 'js/modernizr.js' %}"></script>
-  <script src="{% static 'js/pace.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blogscss.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blogs.css' %}">
+
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
     <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+
+
     <style>
-            .services-list .service-text {
-                height: unset !important;
-            }          
+        .services-list .service-text {
+            height: unset !important;
+        }
 
         @media only screen and (max-width: 767px) {
             .mobheight {
                 height: 501px;
-            } 
+            }
+
             .services-list .service-text {
                 height: unset !important;
             }
+
             .row.section-header {
                 margin: 6rem 25px 0 25px !important;
                 padding: 0;
             }
+
             p {
                 font-size: unset;
             }
         }
-
     </style>
 </head>
 
 <body id="top">
-    
+
     <!-- Header -->
     <header class="s-header">
         <div class="header-logo">
@@ -98,90 +103,89 @@
             <a href="https://www.socialconclave.com/#about" title="about" onclick="myFunction();">About Us</a>
             <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a>
             <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a>
-            <a class="smoothscroll" href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our Team</a>
-            <a class="smoothscroll" href="https://www.socialconclave.com/#contact" title="contact" onclick="myFunction();">Contact</a>
+            <a class="smoothscroll" href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our
+                Team</a>
+            <a class="smoothscroll" href="https://www.socialconclave.com/#contact" title="contact"
+                onclick="myFunction();">Contact</a>
         </div>
     </div>
     <!-- /Mobile Menu -->
 
-  <section id="home" class="s-home target-section" data-parallax="scroll"
-    data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
-    data-position-y="center">
-    <div class="overlay"></div>
-    <div class="shadow-overlay"></div>
-    <div class="home-content">
-      <div class="row home-content__main">
-        <h3>Welcome to Social Conclave</h3>
-        <br>
-        <h1 style="margin-bottom:0px;">
-          We strive to spread smiles <br> and impact lives,</h1>
-        <h1 style='margin-top:0px;'>
-          ONE PROBLEM AT A TIME. <br>
-        </h1>
-        <div class="home-content__buttons">
-          <a href="{% url 'core:overTheYears' %}" class="btn btn--stroke">
-            More About Us
-          </a>
-        </div>
-      </div>
-      <!--<div class="home-content__scroll">
+    <section id="home" class="s-home target-section short-header" data-parallax="scroll"
+        data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
+        data-position-y="center">
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+        <div class="home-content">
+            <div class="row home-content__main">
+                <h3>Social Conclave</h3>
+                <br>
+                <h1 style="margin-bottom:0px;">
+                    Blogs</h1>
+                <div class="home-content__buttons">
+                    <a href="{% url 'main:landing-page' %}" class="btn btn--stroke">Home</a>
+                    <a href="{% url 'core:overTheYears' %}" class="btn btn--stroke">
+                        More About Us
+                    </a>
+                </div>
+            </div>
+            <!--<div class="home-content__scroll">
                     <a href="#about" class="scroll-link smoothscroll">
                         <span>Scroll Down</span>
                     </a>
                 </div>-->
-      <!--<div class="home-content__line"></div>
+            <!--<div class="home-content__line"></div>
             </div>-->
-      <ul class="home-social">
-        <li>
-          <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
-              aria-hidden="true"></i><span>Facebook</span></a>
-        </li>
-        <li>
-          <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
-              aria-hidden="true"></i><span>Twitter</span></a>
-        </li>
-        <li>
-          <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
-              aria-hidden="true"></i><span>Instagram</span></a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
-              aria-hidden="true"></i><span>LinkedIn</span></a>
-        </li>
-      </ul>
-  </section>
+            <ul class="home-social">
+                <li>
+                    <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
+                            aria-hidden="true"></i><span>Facebook</span></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
+                            aria-hidden="true"></i><span>Twitter</span></a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
+                            aria-hidden="true"></i><span>Instagram</span></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+                            aria-hidden="true"></i><span>LinkedIn</span></a>
+                </li>
+            </ul>
+    </section>
 
-  <section id="services" class="s-services">
-    <div class="row section-header has-bottom-sep" data-aos="fade-up">
-      <div class="col-full">
-        <!-- <h3 class="subhead">What We Do</h3> -->
-        <h1 class="display-2">The Conclave Blog</h1>
-      </div>
-    </div>
-    <div class="row services-list block-1-2 block-tab-full" id="remblock">
-
-
-      {% for allblog in allblogs %}
-
-      <div class="col-block service-item" data-aos="fade-up">
-        <div class="service-icon">
-          <img src="{% static 'images/' %}{{allblog.introimage}}">
+    <section id="services" class="s-services">
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <!-- <h3 class="subhead">What We Do</h3> -->
+                <h1 class="display-2">The Conclave Blog</h1>
+            </div>
         </div>
-        <div class="service-text">
-          <h3 class="h2">{{allblog.shortTitle}}</h3>
-            <p>{{allblog.introPara}}
-    
-                <a href="https://socialconclave.com/blogs/{{allblog.slug}}">... Read More</a>
-          </p>
-          
+        <div class="row services-list block-1-2 block-tab-full containerblogs" id="remblock">
+
+            {% for allblog in allblogs %}
+
+            <div class="col-block card" data-aos="fade-up">
+                <div class="card__header">
+                    <img src="{% static 'images/' %}{{allblog.introimage}}" class="card__image" width="600">
+                </div>
+                <div class="card__body">
+                    <h4>{{allblog.shortTitle}}</h4>
+                    <p>{{allblog.introPara}}
+                    </p>
+                    <div class="card__footer">
+                        <a href="{{allblog.slug}}" target="_blank">Read Article</a>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
         </div>
-      </div>
+    </section>
 
-      {% endfor %}
-
-    </div>
-  </section>
-  
     <!-- Footer -->
     <footer>
         <div class="row footer-main">
@@ -260,8 +264,11 @@
             </div>
             <div class="pswp__ui pswp__ui--hidden">
                 <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs
-                               " title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close"
+                        title="Close (Esc)"></button> <button class="pswp__button pswp__button--share"
+                        title="Share"></button> <button class="pswp__button pswp__button--fs
+                               " title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom"
+                        title="Zoom in/out"></button>
                     <div class="pswp__preloader">
                         <div class="pswp__preloader__icn">
                             <div class="pswp__preloader__cut">
@@ -287,7 +294,7 @@
         </div>
     </div>
     <!--Preloader-->
-    
+
     <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'js/9959-js-plugins.js' %}"></script>
@@ -296,18 +303,19 @@
 
     <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin=" anonymous"></script>
-    <script src="{% static 'js/earth.js' %}"></script> 
-  
-  <script>
-    $(window).scroll(function () {
-      var sTop = $(this).scrollTop();
-      if (sTop >= 1500) {
-        $(".service-text").addClass("animmovedown");
-      }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"
+        integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin=" anonymous"></script>
+    <script src="{% static 'js/earth.js' %}"></script>
 
-    });
-  </script>
+    <script>
+        $(window).scroll(function () {
+            var sTop = $(this).scrollTop();
+            if (sTop >= 1500) {
+                $(".service-text").addClass("animmovedown");
+            }
+
+        });
+    </script>
 </body>
 
 </html>

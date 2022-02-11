@@ -12,8 +12,8 @@ class DelegateForm(forms.ModelForm):
         self.fields['counter'].required = False
     class Meta:
         model = Delegate
-        fields = ['counter', 'name', 'phoneNumber', 'altphoneNumber', 'email', 'dob',
-                  'gender', 'schoolName', 'topicPref1', 'topicPref2', 'topicPref3', 'pastexp', 'teamyn','team','mumbai','registeredBy', 'TnC']
+        fields = ['counter', 'name', 'phoneNumber', 'altphoneNumber', 'email', 'dob', 'schoolName',
+                  'gender', 'topicPref1', 'topicPref2', 'topicPref3', 'teamyn','team','mumbai','registeredBy', 'pastexp', 'TnC']
         labels = {
             "name": "",
             'phoneNumber': '',
@@ -55,7 +55,7 @@ class DelegateForm(forms.ModelForm):
             'topicPref2': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
             'topicPref3': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
 
-            'pastexp': forms.TextInput(attrs={'placeholder': 'Course'}),
+            'pastexp': forms.TextInput(attrs={'placeholder': 'Past Experience'}),
 
             'teamyn': forms.RadioSelect(attrs={'placeholder': '', 'required': 'required'}),
 
