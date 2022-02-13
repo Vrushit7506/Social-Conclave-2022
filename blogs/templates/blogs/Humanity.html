@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <link rel="preload" href="{% static 'images/sclogo.png' %}" as="image">
   <link rel="preload" href="{% static 'images/earthRing.png' %}" as="image">
 
@@ -40,8 +40,9 @@
     .home-content__buttons .btn {
       padding: 1.5rem 0.75rem !important;
     }
+
     .header-logo {
-        top: 41px;
+      top: 41px;
     }
   </style>
 
@@ -49,54 +50,55 @@
 </head>
 
 <body id="top">
-    
-    <!-- Header -->
-    <header class="s-header">
-        <div class="header-logo">
-            <a class="site-logo" href="{% url 'main:landing-page' %}">
-                <div class="headlinelogo">
-                    <canvas id="headlinelogocanvas"></canvas>
-                    <img class="scEarth" src="{% static 'images/earthRing.png' %}" alt="Social Impact Logo" />
-                </div>
-                <img class="scLogotxt" src="{% static 'images/socialconclave.png' %}" alt="Homepage">
-            </a>
+
+  <!-- Header -->
+  <header class="s-header">
+    <div class="header-logo">
+      <a class="site-logo" href="{% url 'main:landing-page' %}">
+        <div class="headlinelogo">
+          <canvas id="headlinelogocanvas"></canvas>
+          <img class="scEarth" src="{% static 'images/earthRing.png' %}" alt="Social Impact Logo" />
         </div>
-        <!-- PC Nav -->
-        <nav id="bigone" class="header-nav1">
-            <div class="header-nav__content1">
-                <ul class="header-nav__list">
-                    <li><a href="{% url 'main:landing-page' %}" title="home">Home</a></li>
-                    <li><a href="https://www.socialconclave.com/#about" title="about">About Us</a></li>
-                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
-                    <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li>
-                    <li class="current"><a href="{% url 'core:overTheYears' %}" title="our team">Our Team</a></li>
-                    <li><a href="https://www.socialconclave.com/#contact" title="contact">Contact Us</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- /PC Nav -->
-        <!-- Mobile Nav -->
-        <nav id="smallone" class="con" style="float:right;" onclick="myFunction();">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </nav>
-        <!-- /Mobile Nav -->
-    </header>
-    <!-- /Header -->
-    
-    <!-- Mobile Menu -->
-    <div id="myNav" class="ov">
-        <div class="ov-content">
-            <a href="{% url 'main:landing-page' %}" title="home" onclick="myFunction();">Home</a>
-            <a href="https://www.socialconclave.com/#about" title="about" onclick="myFunction();">About Us</a>
-            <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a>
-            <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a>
-            <a class="smoothscroll" href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our Team</a>
-            <a class="smoothscroll" href="https://www.socialconclave.com/#contact" title="contact" onclick="myFunction();">Contact</a>
-        </div>
+        <img class="scLogotxt" src="{% static 'images/socialconclave.png' %}" alt="Homepage">
+      </a>
     </div>
-    <!-- /Mobile Menu -->
+    <!-- PC Nav -->
+    <nav id="bigone" class="header-nav1">
+      <div class="header-nav__content1">
+        <ul class="header-nav__list">
+          <li><a href="{% url 'main:landing-page' %}" title="home">Home</a></li>
+          <li><a href="https://www.socialconclave.com/#about" title="about">About Us</a></li>
+          <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+          <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li>
+          <li class="current"><a href="{% url 'core:overTheYears' %}" title="our team">Our Team</a></li>
+          <li><a href="https://www.socialconclave.com/#contact" title="contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /PC Nav -->
+    <!-- Mobile Nav -->
+    <nav id="smallone" class="con" style="float:right;" onclick="myFunction();">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </nav>
+    <!-- /Mobile Nav -->
+  </header>
+  <!-- /Header -->
+
+  <!-- Mobile Menu -->
+  <div id="myNav" class="ov">
+    <div class="ov-content">
+      <a href="{% url 'main:landing-page' %}" title="home" onclick="myFunction();">Home</a>
+      <a href="https://www.socialconclave.com/#about" title="about" onclick="myFunction();">About Us</a>
+      <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a>
+      <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a>
+      <a class="smoothscroll" href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our Team</a>
+      <a class="smoothscroll" href="https://www.socialconclave.com/#contact" title="contact"
+        onclick="myFunction();">Contact</a>
+    </div>
+  </div>
+  <!-- /Mobile Menu -->
 
 
   <section id="home" class="s-home target-section" data-parallax="scroll"
@@ -149,8 +151,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-11">
-                        <h1 class="blogheading">Humanity Against Racismh</h1><br>
-       <div class="div1">
+        <h1 class="blogheading">Humanity Against Racismh</h1><br>
+        <div class="div1">
           <p class="div1para">After the name was patented in 1971, it took us about 30 years to realize what was wrong
             with the name 'Fair & Lovely' -
             this is the world we are living in, where the colour of the skin that our ancestors passed onto us is
@@ -296,127 +298,122 @@
   </div>
 
 
-    <!-- Footer -->
-    <footer>
-        <div class="row footer-main">
-            <div class="col-four tab-full left footer-subscribe">
-                <h4>Let's talk about</h4>
-                <p>Got an inquiry? Feel free to reach out to us! We're happy to discuss on it.</p>
-                <ul class="contact-social">
-                    <li>
-                        <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f"
-                                aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter"
-                                aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram"
-                                aria-hidden="true"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
-                                aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-three tab-full right footer-desc">
-                <div class="footer-log"></div>
-                <h4>Links</h4>
-                <ul>
-                    <li><a class="smoothscroll" href="https://www.socialconclave.com/">Home</a></li>
-                    <li><a href="{% url 'core:overTheYears' %}">Our Team</a></li>
-                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
-                    <li><a href="{% url 'blogs:allblog' %}">Blogs</a></li>
-                    <li><a href="https://www.socialconclave.com/#contact">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="col-five tab-full right footer-subscribe">
-                <h4>Have any questions?</h4>
-                <div class="cinfo-footer">
-                    <h5>POORVA CHADHA</h5>
-                    <p>
-                        <a href="tel:+918828467640">+91-8828467640</a><br>
-                        <a href="mailto:spoorvachadha.nmims@gmail.com">poorvachadha.nmims@gmail.com</a>
-                    </p>
-                </div>
-                <div class="cinfo-footer">
-                    <h5>SUNANDAN DASGUPTA</h5>
-                    <p>
-                        <a href="tel:+919820934218">+91-9820934218</a><br>
-                        <a href="mailto:sunandandasgupta.nmims@gmail.com">sunandandasgupta.nmims@gmail.com</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class=" row footer-bottom">
-            <div class="col-twelve">
-                <div class="go-top">
-                    <a class="smoothscroll" title="Back to Top" href="#top">
-                        <i class="icon-arrow-up" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- /Footer -->
+  <!-- Footer -->
+  <footer>
+    <div class="row footer-main">
+      <div class="col-four tab-full left footer-subscribe">
+        <h4>Let's talk about</h4>
+        <p>Got an inquiry? Feel free to reach out to us! We're happy to discuss on it.</p>
+        <ul class="contact-social">
+          <li>
+            <a href="https://facebook.com/socialconclave"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/social_conclave"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="https://instagram.com/socialconclave"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/socialconclave/"><i class="fab fa-linkedin-in"
+                aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-three tab-full right footer-desc">
+        <div class="footer-log"></div>
+        <h4>Links</h4>
+        <ul>
+          <li><a class="smoothscroll" href="https://www.socialconclave.com/">Home</a></li>
+          <li><a href="{% url 'core:overTheYears' %}">Our Team</a></li>
+          <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+          <li><a href="{% url 'blogs:allblog' %}">Blogs</a></li>
+          <li><a href="https://www.socialconclave.com/#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-five tab-full right footer-subscribe">
+        <h4>Have any questions?</h4>
 
-
-    <!--Preloader-->
-    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button> <button class="pswp__button pswp__button--fs
-                               " title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-            </div>
+        <div class="cinfo-footer">
+          <h5>SUNANDAN DASGUPTA</h5>
+          <p>
+            <a href="tel:+919820934218">+91-9820934218</a><br>
+            <a href="mailto:sunandandasgupta.nmims@gmail.com">sunandandasgupta.nmims@gmail.com</a>
+          </p>
         </div>
+      </div>
     </div>
-
-    <div id="preloader">
-        <div id="loader">
-            <div class="scpreloader"><img src="{% static 'images/sclogo.png' %}" style="width:200px;"></div>
+    <div class=" row footer-bottom">
+      <div class="col-twelve">
+        <div class="go-top">
+          <a class="smoothscroll" title="Back to Top" href="#top">
+            <i class="icon-arrow-up" aria-hidden="true"></i>
+          </a>
         </div>
+      </div>
     </div>
-    <!--Preloader-->
-  
-    <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{% static 'js/9959-js-plugins.js' %}"></script>
-    <script src="{% static 'js/320-js-main.js' %}"></script>
-    <script src="{% static 'js/nav.js' %}"></script>
+  </footer>
+  <!-- /Footer -->
 
-    <!-- External Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js" integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin="anonymous"></script>
-        <script>
-            var j = 1;
-        </script>
-    <script src="{% static 'js/earth-blogs.js' %}"></script>
-  
-  
+
+  <!--Preloader-->
+  <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+      <div class="pswp__ui pswp__ui--hidden">
+        <div class="pswp__top-bar">
+          <div class="pswp__counter"></div><button class="pswp__button pswp__button--close"
+            title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button>
+          <button class="pswp__button pswp__button--fs
+                               " title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom"
+            title="Zoom in/out"></button>
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="preloader">
+    <div id="loader">
+      <div class="scpreloader"><img src="{% static 'images/sclogo.png' %}" style="width:200px;"></div>
+    </div>
+  </div>
+  <!--Preloader-->
+
+  <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'js/9959-js-plugins.js' %}"></script>
+  <script src="{% static 'js/320-js-main.js' %}"></script>
+  <script src="{% static 'js/nav.js' %}"></script>
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"
+    integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin="anonymous"></script>
+  <script>
+    var j = 1;
+  </script>
+  <script src="{% static 'js/earth-blogs.js' %}"></script>
+
+
   <script>
     $(window).scroll(function () {
       var sTop = $(this).scrollTop();

@@ -4,33 +4,34 @@
 <html class="no-js" lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Agendas | Social Conclave</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="preload" href="{% static 'images/sclogo.png' %}" as="image">
-    <link rel="preload" href="{% static 'images/earthRing.png' %}" as="image">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" /> -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
-    <link rel="stylesheet" href="{% static 'css/agendas.css' %}">
+    <link rel="stylesheet" href="{% static 'css/overTheYears.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/agendas.css' %}" />
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script src="{% static 'js/pace.min.js' %}"></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
     <link rel="shortcut icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
-<body id="top">
+<body class="overTheYears" id="top">
 
     <!-- Header -->
     <header class="s-header">
@@ -49,10 +50,9 @@
                 <ul class="header-nav__list">
                     <li><a href="{% url 'main:landing-page' %}" title="home">Home</a></li>
                     <li><a href="https://www.socialconclave.com/#about" title="about">About Us</a></li>
-                    <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
+                    <!-- <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li> -->
                     <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li>
-                    <li class="current"><a href="{% url 'core:overTheYears' %}" title="our team">Our Team</a></li>
-                    <li><a href="https://www.socialconclave.com/#contact" title="contact">Contact Us</a></li>
+                    <li class="current"><a class="smoothscroll" href="#superCoreTeam" title="our team">Our Team</a></li>
                 </ul>
             </div>
         </nav>
@@ -72,29 +72,29 @@
         <div class="ov-content">
             <a href="{% url 'main:landing-page' %}" title="home" onclick="myFunction();">Home</a>
             <a href="https://www.socialconclave.com/#about" title="about" onclick="myFunction();">About Us</a>
-            <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a>
+            <!-- <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a> -->
             <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a>
             <a class="smoothscroll" href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our
                 Team</a>
-            <a class="smoothscroll" href="https://www.socialconclave.com/#contact" title="contact"
-                onclick="myFunction();">Contact</a>
         </div>
     </div>
     <!-- /Mobile Menu -->
 
     <section id="home" class="s-home target-section short-header" data-parallax="scroll"
-        data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
+        data-image-src="{% static 'images/Sky Bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
         data-position-y="center">
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
         <div class="home-content">
             <div class="row home-content__main extrapad">
                 <h3>Social Conclave</h3>
-                <h1 style="margin-bottom:0px;">
-                    Agendas</h1>
-            </div>
-            <div class="home-content__buttons">
-                <a href="{% url 'main:landing-page' %}" class="btn btn--stroke">Home</a>
+                <br>
+                <h1 style="margin-bottom: 0px">
+                    Our Agendas For This Year
+                </h1>
+                <div class="home-content__buttons">
+                    <a href="{% url 'main:landing-page' %}" class="btn btn--stroke">Home</a>
+                </div>
             </div>
             <div class="home-content__line"></div>
         </div>
@@ -118,228 +118,115 @@
         </ul>
     </section>
 
-    <section id="agendas" class="s-agendas target-section" data-parallax="scroll" data-natural-width="3000"
-        data-natural-height="2000" data-position-y="center">
-        <div class="marble">
-            <div class="row section-header has-bottom-sep" data-aos="fade-up">
-                <div class="col-full">
-                    <h1 class="display-1 agenda-head">Agendas</h1>
-                    <a href="#agendas" class="scroll-link smoothscroll"></a>
-                </div>
+    <section id="Agendas" class="s-services">
+        <div class="provide" id="teamsId">
+            <div class="header">
+                <span>Our Agendas</span>
+                <h2>Super Core Conclave 2022</h2>
             </div>
         </div>
+    </section>
 
-        <div class="section-agenda" data-aos="fade-up">
-            <div class="agenda" data-aos="fade-up">
-                <div class="agendaImg">
-                    <img src="{% static 'images/agendas/climate.jpg' %}">
+    <section id="AgendasDetails" class="s-services">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="flexheader">
+                        <img src="{% static 'images/One.png' %}" alt="">
+                        <h2 class="heading">Affordable & Clean Energy</h2>
+                    </div>
+
+                    <div class="para">
+                        <p>By 2030, everyone should have access to cheap and dependable energy services, according to
+                            Goal 7 of
+                            the Sustainable Development Goals.
+                            India is the third-largest energy consumer in the world. Almost all forms of electricity
+                            generation
+                            generate some waste, hence switching to renewable energy sources is essential.
+                            Renewable energy sources not only help to reduce greenhouse gas emissions, but they also
+                            provide
+                            significant socioeconomic advantages over carbon-based fossil fuels.
+                            Renewable energy sources are the answer to India's rising energy demands.</p>
+                    </div>
                 </div>
-                <div class="agendaName">
-                    <h1>CLIMATE ACTION</h1>
+                <div class="col-sm-6">
+                    <div class="flexheader">
+                        <img src="{% static 'images/Two.png' %}" alt="">
+                        <h2 class="heading">Rural Healthcare</h2>
+                    </div>
+
+                    <div class="para">
+                        <p>Healthcare is a human right, but in India, 60 percent of the population lacks access to it
+                            due to a
+                            lack of quality infrastructure, a paucity of skilled medical personnel, and inaccessibility
+                            to vital
+                            facilities.
+                            For low-income rural residents, private medical facilities are unaffordable due to their
+                            high cost
+                            and often inconsistent quality.
+                            In our country, private providers account for 92 percent of healthcare visits, with the
+                            urban
+                            population accounting for 70 percent.
+                            The pandemic has placed enormous demands on public healthcare, necessitating immediate
+                            attention to
+                            the resolution of the system's profound fault lines and vulnerabilities.
+                            Our country is in dire need of an improved infrastructure that ensures affordable, quality
+                            and
+                            timely healthcare for the rural population.</p>
+                    </div>
                 </div>
-                <div class="agendaDscp">
-                    <p>
-                        Humans are in constant pursuit of improving our lives. We often fail to notice how our actions
-                        and the choices we make affect the very planet we live on. Climate change is a real threat. It
-                        is present and looms over us as a foreboding reminder of our
-                        doom if we fail to take action. While the extinction of our species may seem too far-fetched a
-                        thought, callous choices and ignorance are paving the way to an onslaught of a dark future. This
-                        agenda calls for you to be a voice
-                        of change by discussing methods that transcend into a better future for all.
-                    </p>
+                <div class="col-sm-6">
+                    <div class="flexheader">
+                        <img src="{% static 'images/Three.png' %}" alt="">
+                        <div class="imgside">
+                            <h2 class="heading">Women’s Safety And Vigilance</h2>
+                        </div>
+                    </div>
+
+
+                    <div class="para">
+                        <p>Women and girls face abuse and other forms of violence on a daily basis in both urban and
+                            rural
+                            settings.
+                            Women's safety entails not just "making our cities safer for women," but also "providing
+                            safety and
+                            an empowering area for women to report crimes and recover from them."
+                            It also refers to women's liberation from the mental pain caused by social pressure and
+                            shame.
+                            To end violence against women and girls, much more needs to be done.
+                            The first step toward gender equality is to provide safety.
+                            A lot more has to be done to end violence against women and girls and ensuring their safety
+                            is just
+                            a small but vital step in this long journey.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="agenda" data-aos="fade-up">
-                <div class="agendaImg">
-                    <img src="{% static 'images/agendas/flow.jpg' %}">
+                <div class="col-sm-6">
+                    <div class="flexheader">
+                        <img src="{% static 'images/Four.png' %}" alt="">
+                        <h2 class="heading">Sustainability Of Consumer Goods</h2>
+                    </div>
+
+                    <div class="para">
+                        <p>By 2070, India's economy aspires to be carbon neutral.
+                            Consumers must switch to sustainable goods in order to reach this ambitious aim.
+                            Sustainable purchasing reduces waste, conserves natural resources, and promotes the growth
+                            of the
+                            green economy, all of which contribute to the country's environmental objectives.
+                            India's emissions account for about 7% of total global emissions. While the movement has
+                            gained
+                            traction globally, with brands adopting more sustainable practices, ethical sourcing, and
+                            lowering
+                            their carbon footprint, consumer concerns in India are still minor, but they are beginning
+                            to affect
+                            brands.
+                            Encourage industries, enterprises, and consumers to recycle and minimize waste to help
+                            developing
+                            countries shift to more sustainable consumption patterns.</p>
+                    </div>
                 </div>
-                <div class="agendaName">
-                    <h1>FINANCIAL INDEPENDENCE OF WOMEN</h1>
-                </div>
-                <div class="agendaDscp">
-                    <p>
-                        In today’s day and age, Women are under-represented at all levels of political leadership as
-                        well as managerial positions in the professional world. This poses a big social problem where
-                        women do not have the resources to be financially independent and
-                        thus feeding into the problem of gender inequality. Financially independent women create an
-                        evolved and equitable society. To shift from a chauvinistic paradigm, the barriers of
-                        discrimination need to be torn down. This agenda
-                        will dive deep into the situation and try to pose solutions for these issues at their root to
-                        strengthen the futures of women and Indian families.
-                    </p>
-                </div>
-            </div>
-            <div class="agenda" data-aos="fade-up">
-                <div class="agendaImg">
-                    <img src="{% static 'images/agendas/riu.jpeg' %}">
-                </div>
-                <div class="agendaName">
-                    <h1>RURAL ILLITERACY AND UNEMPLOYMENT</h1>
-                </div>
-                <div class="agendaDscp">
-                    <p>
-                        The pursuit of modernization has marginalized the weaker sections of society and has led to
-                        dwindling opportunities in terms of jobs and financial aspects. Illiteracy among the rural
-                        population contributes to the growing rate of unemployment in India,
-                        which means more people left with very few opportunities to sustain themselves and their
-                        families. This continues to ingress not only the path of development but also the economic
-                        progress of India. Young passionate individuals
-                        are in need to reinvigorate the flame of development, paving a path to progress, for the sake of
-                        society and for the sake of our fellow humans.
-                    </p>
-                </div>
-            </div>
-            <div class="agenda" data-aos="fade-up">
-                <div class="agendaImg">
-                    <img src="{% static 'images/agendas/ypsm.jpg' %}">
-                </div>
-                <div class="agendaName">
-                    <h1>YOUTH PRIVACY AND SOCIAL MEDIA</h1>
-                </div>
-                <div class="agendaDscp">
-                    <p>
-                        Over the past few decades, the emergence of new technologies has resulted in an exponential rise
-                        in the number of active users across multiple social media platforms. Teens share a wide range
-                        of information about themselves on social media, they are exposed
-                        to inappropriate content, cyber bullying and have created a false sense of reality. While social
-                        networking sites have created multiple avenues of communication, the pitfalls related to privacy
-                        breaches and cyber attacks should
-                        raise serious questions. The agenda will discuss these problems focussing on the privacy and
-                        security issues that are inherent to social media.
-                    </p>
-                </div>
-            </div>
-            <div class="agenda" data-aos="fade-up">
-                <div class="agendaImg">
-                    <img src="{% static 'images/agendas/zerohunger.jpeg' %}">
-                </div>
-                <div class="agendaName">
-                    <h1>ZERO HUNGER</h1>
-                </div>
-                <div class="agendaDscp">
-                    <p>
-                        While India produces enough food to feed its population, the country is home to 25 percent of
-                        the world’s starved population. A holistic approach to food security requires available,
-                        accessible and nutritious food in order to eradicate hunger and malnutrition
-                        in India. This agenda will seek to discuss the high rate of malnutrition, levels of stunting and
-                        food wastage, where the goal is to end hunger, achieve food security, improve nutrition, and
-                        promote sustainable agriculture. Additionally,
-                        it will dive into the economics of hunger, the costs associated with it and the lack of
-                        infrastructure in rural areas to preserve food and sustainability of agriculture.
-                    </p>
-                </div>
+
             </div>
         </div>
-
-
-        <div class="agendas-content" data-aos="fade-up">
-            <div class="agendasTopics">
-                <div class="agendaTopic">
-                    <a href="" class="topic" data-rel="agenda1">CLIMATE ACTION</a>
-                </div>
-                <div class="agendaTopic">
-                    <a href="" class="topic" data-rel="agenda2">FINANCIAL INDEPENDENCE OF WOMEN</a>
-                </div>
-                <div class="agendaTopic">
-                    <a href="" class="topic" data-rel="agenda3">RURAL ILLITERACY AND UNEMPLOYMENT</a>
-                </div>
-                <div class="agendaTopic">
-                    <a href="" class="topic" data-rel="agenda4">YOUTH PRIVACY AND SOCIAL MEDIA</a>
-                </div>
-                <div class="agendaTopic">
-                    <a href="" class="topic" data-rel="agenda5">ZERO HUNGER</a>
-                </div>
-            </div>
-            <div class="agendasDscps" data-aos="fade-up">
-                <div class="agendaDscp" id="agenda1">
-                    <div class="Dscp">
-                        <h1>CLIMATE ACTION</h1>
-                        <hr>
-                        <div class="para">
-                            Humans are in constant pursuit of improving our lives. We often fail to notice how our
-                            actions and the choices we make affect the very planet we live on. Climate change is a real
-                            threat. It is present and looms over us as a foreboding reminder of our
-                            doom if we fail to take action. While the extinction of our species may seem too far-fetched
-                            a thought, callous choices and ignorance are paving the way to an onslaught of a dark
-                            future. This agenda calls for you to be a voice
-                            of change by discussing methods that transcend into a better future for all.
-                        </div>
-                    </div>
-                    <img class="bg-agenda" src="{% static 'images/agendas/climate.jpg' %}">
-                </div>
-                <div class="agendaDscp hidden" id="agenda2">
-                    <div class="Dscp">
-                        <h1>FINANCIAL INDEPENDENCE OF WOMEN</h1>
-                        <hr>
-                        <div class="para">
-                            In today’s day and age, Women are under-represented at all levels of political leadership as
-                            well as managerial positions in the professional world. This poses a big social problem
-                            where women do not have the resources to be financially independent and
-                            thus feeding into the problem of gender inequality. Financially independent women create an
-                            evolved and equitable society. To shift from a chauvinistic paradigm, the barriers of
-                            discrimination need to be torn down. This agenda
-                            will dive deep into the situation and try to pose solutions for these issues at their root
-                            to strengthen the futures of women and Indian families.
-                        </div>
-                    </div>
-                    <img class="bg-agenda" src="{% static 'images/agendas/flow.jpg' %}">
-                </div>
-                <div class="agendaDscp hidden" id="agenda3">
-                    <div class="Dscp">
-                        <h1>RURAL ILLITERACY AND UNEMPLOYMENT</h1>
-                        <hr>
-                        <div class="para">
-                            The pursuit of modernization has marginalized the weaker sections of society and has led to
-                            dwindling opportunities in terms of jobs and financial aspects. Illiteracy among the rural
-                            population contributes to the growing rate of unemployment in India,
-                            which means more people left with very few opportunities to sustain themselves and their
-                            families. This continues to ingress not only the path of development but also the economic
-                            progress of India. Young passionate individuals
-                            are in need to reinvigorate the flame of development, paving a path to progress, for the
-                            sake of society and for the sake of our fellow humans.
-                        </div>
-                    </div>
-                    <img class="bg-agenda" src="{% static 'images/agendas/riu.jpeg' %}">
-                </div>
-                <div class="agendaDscp hidden" id="agenda4">
-                    <div class="Dscp">
-                        <h1>YOUTH PRIVACY AND SOCIAL MEDIA</h1>
-                        <hr>
-                        <div class="para">
-                            Over the past few decades, the emergence of new technologies has resulted in an exponential
-                            rise in the number of active users across multiple social media platforms. Teens share a
-                            wide range of information about themselves on social media, they are exposed
-                            to inappropriate content, cyber bullying and have created a false sense of reality. While
-                            social networking sites have created multiple avenues of communication, the pitfalls related
-                            to privacy breaches and cyber attacks should
-                            raise serious questions. The agenda will discuss these problems focussing on the privacy and
-                            security issues that are inherent to social media.
-                        </div>
-                    </div>
-                    <img class="bg-agenda" src="{% static 'images/agendas/ypsm.jpg' %}">
-                </div>
-                <div class="agendaDscp hidden" id="agenda5">
-                    <div class="Dscp">
-                        <h1>ZERO HUNGER</h1>
-                        <hr>
-                        <div class="para">
-                            While India produces enough food to feed its population, the country is home to 25 percent
-                            of the world’s starved population. A holistic approach to food security requires available,
-                            accessible and nutritious food in order to eradicate hunger and malnutrition
-                            in India. This agenda will seek to discuss the high rate of malnutrition, levels of stunting
-                            and food wastage, where the goal is to end hunger, achieve food security, improve nutrition,
-                            and promote sustainable agriculture.
-                            Additionally, it will dive into the economics of hunger, the costs associated with it and
-                            the lack of infrastructure in rural areas to preserve food and sustainability of
-                            agriculture.
-                        </div>
-                    </div>
-                    <img class="bg-agenda" src="{% static 'images/agendas/zerohunger.jpeg' %}">
-                </div>
-            </div>
-        </div>
-
-        <div class="marble marble-foot"></div>
     </section>
 
     <!-- Footer -->
@@ -380,13 +267,7 @@
             </div>
             <div class="col-five tab-full right footer-subscribe">
                 <h4>Have any questions?</h4>
-                <div class="cinfo-footer">
-                    <h5>POORVA CHADHA</h5>
-                    <p>
-                        <a href="tel:+918828467640">+91-8828467640</a><br>
-                        <a href="mailto:spoorvachadha.nmims@gmail.com">poorvachadha.nmims@gmail.com</a>
-                    </p>
-                </div>
+
                 <div class="cinfo-footer">
                     <h5>SUNANDAN DASGUPTA</h5>
                     <p>
@@ -451,6 +332,7 @@
     </div>
     <!--Preloader-->
 
+    <script data-cfasync="false" src="{% static 'js/cloudflare-static-email-decode.min.js' %}"></script>
     <script src="{% static 'js/5597-js-jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'js/9959-js-plugins.js' %}"></script>
     <script src="{% static 'js/320-js-main.js' %}"></script>
@@ -459,22 +341,16 @@
     <!-- External Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"
-        integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin="anonymous"></script>
+        integrity="sha256-gSh8eotzb/CVvCREGPUNgIWuDnTYnZvVOQnRrP1eDjI=" crossorigin=" anonymous"></script>
     <script src="{% static 'js/earth.js' %}"></script>
 
     <script>
-        f = 1;
-        $(".topic").click(function (e) {
-            e.preventDefault();
-            g = '#' + $(this).data('rel');
-            $('.agendasDscps .agendaDscp').fadeOut('fast');
-            $('#' + $(this).data('rel')).fadeIn('slow');
-        });
-
-        if ($(window).width() < 767) {
-            document.querySelector('.agendas-content').style.display = 'none';
-        } else {
-            document.querySelector('.section-agenda').style.display = 'none';
+        function CardClick(thisCard) {
+            allcards = document.getElementsByClassName("card");
+            for (let i = 0; i < allcards.length; i++) {
+                allcards[i].classList.remove("active");
+            }
+            thisCard.classList.add("active");
         }
     </script>
 </body>

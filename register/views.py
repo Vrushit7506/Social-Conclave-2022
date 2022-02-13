@@ -8,6 +8,7 @@ from django.template import Context
 from django.template.loader import get_template
 from django.views.generic import TemplateView
 from django.views.decorators.csrf import csrf_exempt
+import random
 
 from django.http import HttpResponse
 from tablib import Dataset
@@ -41,8 +42,9 @@ def Renderform(request):
             i = Delegate.objects.all().order_by('-counter')[0]
             request.POST['counter'] = i.counter+1
             request.POST['counter'] = "{:03d}".format(request.POST['counter'])
-            order_id = "ID" + request.POST['counter']
+            order_id = str(random.randint(11,99)) + request.POST['counter']
             form.save()
+            print(order_id)
 
 
             param_dict = dict()
@@ -51,7 +53,7 @@ def Renderform(request):
 
                     'MID': Paytm_id,
                     'ORDER_ID': order_id,
-                    'TXN_AMOUNT': '10.00',
+                    'TXN_AMOUNT': '1200.00',
                     'CUST_ID': request.POST['counter'],
                     'INDUSTRY_TYPE_ID': 'Retail',
                     'WEBSITE': 'DEFAULT',

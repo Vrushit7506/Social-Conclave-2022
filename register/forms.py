@@ -30,7 +30,7 @@ class DelegateForm(forms.ModelForm):
             "team": "",
             "mumbai": "Residing in Mumbai? ",
             'registeredBy':'',
-            'TnC': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper laoreet placerat. Nullam semper auctor justo, rutrum posuere odio vulputate nec.',
+            'TnC': 'The Email Address Provided Above Will Be Used For Further Communication And Steps.',
         }
         widgets = {
             'counter': forms.HiddenInput(),

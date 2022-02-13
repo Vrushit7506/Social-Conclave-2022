@@ -79,9 +79,8 @@
                     <li><a href="{% url 'main:landing-page' %}" title="home">Home</a></li>
                     <li><a href="https://www.socialconclave.com/#about" title="about">About Us</a></li>
                     <li><a href="{% url 'core:agendas' %}" title="agendas">Agendas</a></li>
-                    <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li>
-                    <li class="current"><a href="{% url 'core:overTheYears' %}" title="our team">Our Team</a></li>
-                    <li><a href="https://www.socialconclave.com/#contact" title="contact">Contact Us</a></li>
+                    <!-- <li><a href="{% url 'blogs:allblog' %}" title="blogs">Blogs</a></li> -->
+                    <li class="current"><a class="smoothscroll" href="#superCoreTeam" title="our team">Our Team</a></li>
                 </ul>
             </div>
         </nav>
@@ -102,17 +101,15 @@
             <a href="{% url 'main:landing-page' %}" title="home" onclick="myFunction();">Home</a>
             <a href="https://www.socialconclave.com/#about" title="about" onclick="myFunction();">About Us</a>
             <a href="{% url 'core:agendas' %}" title="agendas" onclick="myFunction();">Agendas</a>
-            <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a>
+            <!-- <a href="{% url 'blogs:allblog' %}" title="blogs" onclick="myFunction();">Blog</a> -->
             <a class="smoothscroll" href="{% url 'core:overTheYears' %}" title="our team" onclick="myFunction();">Our
                 Team</a>
-            <a class="smoothscroll" href="https://www.socialconclave.com/#contact" title="contact"
-                onclick="myFunction();">Contact</a>
         </div>
     </div>
     <!-- /Mobile Menu -->
 
     <section id="home" class="s-home target-section short-header" data-parallax="scroll"
-        data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
+        data-image-src="{% static 'images/Sky bg.jpg' %}" data-natural-width="3000" data-natural-height="2000"
         data-position-y="center">
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
@@ -224,13 +221,7 @@
             </div>
             <div class="col-five tab-full right footer-subscribe">
                 <h4>Have any questions?</h4>
-                <div class="cinfo-footer">
-                    <h5>POORVA CHADHA</h5>
-                    <p>
-                        <a href="tel:+918828467640">+91-8828467640</a><br>
-                        <a href="mailto:spoorvachadha.nmims@gmail.com">poorvachadha.nmims@gmail.com</a>
-                    </p>
-                </div>
+
                 <div class="cinfo-footer">
                     <h5>SUNANDAN DASGUPTA</h5>
                     <p>

@@ -1,270 +1,275 @@
 .overTheYears {
-    word-wrap: unset;
+  word-wrap: unset;
 }
 
 .overTheYears .provide .header {
-    font-family: montserrat-medium, sans-serif;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    padding: 0 200px;
-    margin-bottom: 9rem;
+  font-family: montserrat-medium, sans-serif;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 200px;
+  margin-bottom: 9rem;
 }
 
 .hideClass {
-    display: none !important;
+  display: none !important;
 }
 
 .overTheYears .provide .header span {
-    font-size: 1.7rem;
-    line-height: 1.333;
-    text-transform: uppercase;
-    letter-spacing: 0.25rem;
-    color: #2f89fc;
-    margin-top: 0;
-    margin-bottom: 0;
+  font-size: 1.7rem;
+  line-height: 1.333;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #2f89fc;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .overTheYears .provide .header h2 {
-    font-size: 4.5rem;
-    line-height: 1.15;
-    color: #000;
-    margin-bottom: 1.8rem;
-    letter-spacing: -0.1rem;
-    margin-top: 0.6rem;
-    font-style: normal;
-    font-weight: 400;
-    text-rendering: optimizeLegibility;
+  font-size: 4.5rem;
+  line-height: 1.15;
+  color: #000;
+  margin-bottom: 1.8rem;
+  letter-spacing: -0.1rem;
+  margin-top: 0.6rem;
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
 }
 
 .overTheYears .provide .header p {
-    color: #757575;
-    font-family: lora-regular, serif;
-    font-size: 1.7rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.765;
+  color: #757575;
+  font-family: lora-regular, serif;
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.765;
 }
 
 .team2021 {
-    width: 80%;
-    margin: 0 auto;
-    max-width: 1280px;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
 .supercore {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .sc-block {
-    width: 100%;
-    margin-bottom: 5rem;
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center;
-    align-content: center;
-    column-gap: 50px;
+  width: 100%;
+  margin-bottom: 5rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-content: center;
+  column-gap: 50px;
 }
 
 .sc-block-image {
-    width: 300px;
-    height: 400px;
-    margin: auto 0;
+  width: 300px;
+  height: 400px;
+  margin: auto 0;
 }
 
 .block-image {
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    float: left;
-    border-radius: 18px;
-    background-color: transparent;
-    box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 3%), 0 6.7px 5.3px rgb(0 0 0 / 5%), 0 12.5px 10px rgb(0 0 0 / 6%), 0 22.3px 17.9px rgb(0 0 0 / 7%), 0 41.8px 33.4px rgb(0 0 0 / 9%), 0 100px 80px rgb(0 0 0 / 12%);
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  float: left;
+  border-radius: 18px;
+  background-color: transparent;
+  box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 3%), 0 6.7px 5.3px rgb(0 0 0 / 5%),
+    0 12.5px 10px rgb(0 0 0 / 6%), 0 22.3px 17.9px rgb(0 0 0 / 7%),
+    0 41.8px 33.4px rgb(0 0 0 / 9%), 0 100px 80px rgb(0 0 0 / 12%);
 }
 
 .block-image img {
-    border-radius: 18px;
-    width: 100%;
-    object-position: center;
-    object-fit: cover;
+  /* border-radius: 18px; */
+  margin-top: 45px;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
 }
 
 .sc-block-dscp .post h1 {
-    margin-top: 0;
-    margin-bottom: 0.8rem;
-    font-weight: bold;
-    font-size: 2.2rem;
-    text-decoration: underline;
-    color: #08aeea;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+  font-size: 2.2rem;
+  text-decoration: underline;
+  color: #08aeea;
 }
 
 .sc-block-dscp .name h2 {
-    font-weight: bold;
-    font-size: 3rem;
-    margin-top: 0;
-    margin-bottom: 1.4rem;
-    color: #2f89fc;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 1.4rem;
+  color: #2f89fc;
 }
 
 .sc-block-dscp .about h3 {
-    font-size: 1.8rem;
-    font-weight: 500;
-    text-align: left;
-    margin-top: 0;
-    color: rgba(0, 0, 0, 0.7);
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: left;
+  margin-top: 0;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 #services::before {
-    content: "";
-    display: block;
-    padding-top: 25px;
-    margin-top: 0;
-    visibility: hidden;
+  content: "";
+  display: block;
+  padding-top: 25px;
+  margin-top: 0;
+  visibility: hidden;
 }
 
 .core {
-    width: 100%;
-    height: 500px;
-    padding: 50px;
+  width: 100%;
+  height: 500px;
+  padding: 50px;
 }
 
 .core h3 {
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 0;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .dept-box {
-    width: 280px;
-    position: relative;
-    height: 350px;
-    float: left;
-    margin: 0 3rem;
+  width: 280px;
+  position: relative;
+  height: 350px;
+  float: left;
+  margin: 0 3rem;
 }
 
 .ribbon {
-    position: absolute;
-    bottom: calc(-1 * (0px + 10px));
-    height: 0;
-    width: 0;
-    right: 0;
-    border: calc(0px + 10px) solid transparent;
-    border-left-width: 0;
-    border-top-color: #306a79;
+  position: absolute;
+  bottom: calc(-1 * (0px + 10px));
+  height: 0;
+  width: 0;
+  right: 0;
+  border: calc(0px + 10px) solid transparent;
+  border-left-width: 0;
+  border-top-color: #306a79;
 }
 
 .dept {
-    background-color: #2f89fc;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: calc(0px + 10px);
-    text-align: center;
-    color: black;
-    padding: 25px 0;
+  background-color: #2f89fc;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: calc(0px + 10px);
+  text-align: center;
+  color: black;
+  padding: 25px 0;
 }
 
 .dept h1 {
-    margin-top: 0;
-    letter-spacing: 0rem;
-    font-family: "montserrat-light", sans-serif;
+  margin-top: 0;
+  letter-spacing: 0rem;
+  font-family: "montserrat-light", sans-serif;
 }
 
 .deptName {
-    font-weight: 300;
-    font-size: 2.6rem;
-    margin-bottom: 18px;
+  font-weight: 300;
+  font-size: 2.6rem;
+  margin-bottom: 18px;
 }
 
 .deptPost {
-    font-weight: 100;
-    font-size: 2.1rem;
-    margin-bottom: 5px;
+  font-weight: 100;
+  font-size: 2.1rem;
+  margin-bottom: 5px;
 }
 
 .deptNames {
-    font-weight: 600;
-    font-size: 18px;
-    margin-bottom: 18px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 18px;
 }
 
 .gridAbout {
-    position: relative;
-    width: 1250px;
-    display: grid;
-    grid-template-columns: 380px 380px 380px;
-    margin: 20px auto;
-    column-gap: 50px;
+  position: relative;
+  width: 1250px;
+  display: grid;
+  grid-template-columns: 380px 380px 380px;
+  margin: 20px auto;
+  column-gap: 50px;
 }
 
 #coreTeam {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .gridAbout .card {
-    position: relative;
-    height: 250px;
-    background: rgba(0, 0, 0, 0.03);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 30px 0;
-    border-radius: 12px;
-    box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 3%), 0 6.7px 5.3px rgb(0 0 0 / 5%), 0 12.5px 10px rgb(0 0 0 / 6%), 0 22.3px 17.9px rgb(0 0 0 / 7%), 0 41.8px 33.4px rgb(0 0 0 / 9%), 0 100px 80px rgb(0 0 0 / 12%);
+  position: relative;
+  height: 250px;
+  background: rgba(0, 0, 0, 0.03);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px 0;
+  border-radius: 12px;
+  box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 3%), 0 6.7px 5.3px rgb(0 0 0 / 5%),
+    0 12.5px 10px rgb(0 0 0 / 6%), 0 22.3px 17.9px rgb(0 0 0 / 7%),
+    0 41.8px 33.4px rgb(0 0 0 / 9%), 0 100px 80px rgb(0 0 0 / 12%);
 }
 
 .gridAbout .card .imgBox {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #2f89fc;
-    z-index: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    overflow: hidden !important;
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-    border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden !important;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  border-radius: 10px;
 }
 
 .gridAbout .card .imgBox:before {
-    content: attr(data-text);
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 2em;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 700;
+  content: attr(data-text);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  color: #00143b;
+  font-weight: 700;
 }
 
 .gridAbout .card .imgBox img {
-    max-width: 100px;
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-    opacity: 0.7;
+  max-width: 175px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  opacity: 1;
 }
 
 .gridAbout .card:hover .imgBox {
-    width: 150px;
-    height: 150px;
-    left: -75px;
-    top: calc(50% - 75px);
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-    background: #7bc342;
+  width: 150px;
+  height: 150px;
+  left: -75px;
+  top: calc(50% - 75px);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  background: #a5db7b;
 }
 
 .gridAbout .card:hover .imgBox:before {
@@ -272,122 +277,121 @@
 }
 
 .gridAbout .card:hover .imgBox img {
-    max-width: 75px;
+  max-width: 120px;
 }
 
 .gridAbout .card .content {
-    position: absolute;
-    right: 0;
-    width: calc(100% - 75px);
-    height: 100%;
-    padding: 20px;
-    overflow: hidden !important;
+  position: absolute;
+  right: 0;
+  width: calc(100% - 75px);
+  height: 100%;
+  padding: 20px;
+  overflow: hidden !important;
 }
 
-
 .gridAbout .card .content span {
-    display: inline-block;
-    margin-left: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #2f89fc;
-    text-transform: uppercase;
-    position: relative;
-    margin-bottom: 5px;
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2f89fc;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 5px;
 }
 
 .gridAbout .card .content span::before {
-    content: "";
-    position: absolute;
-    bottom: 2px;
-    left: 0;
-    width: 30px;
-    height: 2px;
-    background-color: black;
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: black;
 }
 
 .gridAbout .card .content h3 {
-    margin-left: 10px;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0px;
-    margin-top: 0;
-    text-transform: uppercase;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  margin-top: 0;
+  text-transform: uppercase;
 }
 
 .gridAbout .four .imgBox:before {
-    font-size: 5em;
+  font-size: 5em;
 }
 
 .gridAbout .four .content h3,
 .gridAbout .four .content h4 {
-    margin-left: 60px !important;
+  margin-left: 60px !important;
 }
 
 @media only screen and (max-width: 900px) {
-    .sc-block {
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
-        column-gap: 0;
-        row-gap: 50px;
-    }
-    .overTheYears .provide .header {
-            padding: 0 2rem;
-            margin-bottom: 2rem;
-    }
+  .sc-block {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    column-gap: 0;
+    row-gap: 50px;
+  }
+  .overTheYears .provide .header {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 @media only screen and (max-width: 1300px) {
-    .gridAbout {
-        width: 800px;
-        grid-template-columns: 380px 380px;
-        column-gap: 50px;
-    }
+  .gridAbout {
+    width: 800px;
+    grid-template-columns: 380px 380px;
+    column-gap: 50px;
+  }
 }
 
 @media only screen and (max-width: 850px) {
-    .gridAbout {
-        width: 420px;
-        grid-template-columns: 420px;
-        column-gap: 50px;
-        row-gap: 70px;
-    }
-    .gridAbout .card {
-        position: relative;
-        height: 350px;
-    }
-    .gridAbout .card:hover .imgBox {
-        width: 150px;
-        height: 150px;
-        left: calc(50% - 75px);
-        top: -75px;
-        -webkit-transition: 0.5s ease-in-out;
-        transition: 0.5s ease-in-out;
-        background: #ff0057;
-    }
-    .gridAbout .card.active .imgBox {
-        width: 150px;
-        height: 150px;
-        left: calc(50% - 75px);
-        top: -75px;
-        -webkit-transition: 0.5s ease-in-out;
-        transition: 0.5s ease-in-out;
-        background: #ff0057;
-    }
-    .gridAbout .card .content {
-        right: 25px;
-        top: 80px;
-    }
-    .s-services {
-        padding-bottom: 3rem;
-    }
+  .gridAbout {
+    width: 420px;
+    grid-template-columns: 420px;
+    column-gap: 50px;
+    row-gap: 70px;
+  }
+  .gridAbout .card {
+    position: relative;
+    height: 350px;
+  }
+  .gridAbout .card:hover .imgBox {
+    width: 150px;
+    height: 150px;
+    left: calc(50% - 75px);
+    top: -75px;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    background: #ff0057;
+  }
+  .gridAbout .card.active .imgBox {
+    width: 150px;
+    height: 150px;
+    left: calc(50% - 75px);
+    top: -75px;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    background: #ff0057;
+  }
+  .gridAbout .card .content {
+    right: 25px;
+    top: 80px;
+  }
+  .s-services {
+    padding-bottom: 3rem;
+  }
 }
 
 @media only screen and (max-width: 450px) {
-    .gridAbout {
-        margin: 0 20px;
-        width: 90%;
-        grid-template-columns: 100%;
-        column-gap: 50px;
-    }
+  .gridAbout {
+    margin: 0 20px;
+    width: 90%;
+    grid-template-columns: 100%;
+    column-gap: 50px;
+  }
 }

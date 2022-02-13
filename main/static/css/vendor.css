@@ -950,12 +950,24 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos] {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
+
 .slick-track {
   position: relative;
   left: 0;
   top: 0;
   display: block;
 }
+
+.sponsers .slick-track {
+  width: 500px !important;
+}
+
+@media only screen and (max-width: 500px) {
+  .sponsers .slick-track {
+    width: 250px !important;
+  }
+}
+
 .slick-track:before,
 .slick-track:after {
   content: "";
