@@ -58,7 +58,7 @@ def Renderform(request):
                     'INDUSTRY_TYPE_ID': 'Retail',
                     'WEBSITE': 'DEFAULT',
                     'CHANNEL_ID': 'WEB',
-                    'CALLBACK_URL':'http://127.0.0.1:8000/register/handlerequest/',
+                    'CALLBACK_URL':'https://socialconclave.com/register/handlerequest/',
 
             }
 
